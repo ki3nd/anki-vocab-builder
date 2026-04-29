@@ -124,7 +124,7 @@ Markdown table with columns:
 |--------|--------|
 | `compound_noun` | from `output/compound_nouns.md` |
 | `definition` | best-matching sense from API, or self-generated (fallback is common) |
-| `ipa` | `pronunciations[0].text`, or self-generated |
+| `ipa` | `pronunciations[0].text`; self-generated (General American) if empty |
 | `examples` | always 4 examples (API + custom to fill), separated by ` · ` |
 | `quotes` | first quote from the chosen sense |
 | `tags` | sense tags |
