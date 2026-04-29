@@ -11,7 +11,7 @@
 
 /* ── Word ─────────────────────────────────────── */
 .word {
-  font-size: 52px;
+  font-size: 36px;
   font-weight: 700;
   color: #2e7d60;
   padding-top: 12px;
@@ -161,22 +161,23 @@
   margin: 14px 0 6px;
 }
 
-.examples-list {
+.examples-lines {
   text-align: left;
   max-width: 580px;
   margin: 0 auto;
-  padding-left: 24px;
+  padding: 0 16px;
 }
 
-.examples-list li {
+.example-line {
   font-size: 16px;
   color: #374151;
-  padding: 5px 0;
+  padding: 6px 0;
   line-height: 1.6;
   border-bottom: 1px dashed #e8ecf5;
+  margin: 0;
 }
 
-.examples-list li:last-child {
+.example-line:last-child {
   border-bottom: none;
 }
 
@@ -286,7 +287,7 @@
   color: #e8eaf6;
 }
 
-.night_mode .examples-list li {
+.night_mode .example-line {
   color: #cfd8dc;
   border-bottom-color: #2d3748;
 }
