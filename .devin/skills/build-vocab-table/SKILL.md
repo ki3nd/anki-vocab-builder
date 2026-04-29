@@ -86,7 +86,7 @@ Criteria (in order of priority):
 
 From the chosen sense, collect:
 - **definition** — the definition string
-- **ipa** — `pronunciations[0].text` (from the entry, already filtered)
+- **ipa** — `pronunciations[0].text` (from the entry, already filtered); if empty, write the IPA transcription yourself (General American preferred)
 - **api_examples** — up to 2 strings from `sense.examples[]`
 - **quote** — `sense.quotes[0].text` (first quote only; leave empty if none)
 - **tags** — `sense.tags[]` joined with `, ` (leave empty if none)

@@ -93,7 +93,7 @@ Markdown table with columns:
 |--------|--------|
 | `word` | from `output/vocabulary.md` |
 | `definition` | best-matching sense from API |
-| `ipa` | `pronunciations[0].text` |
+| `ipa` | `pronunciations[0].text`; self-generated (General American) if empty |
 | `partofspeech` | full word (noun, verb, adjective, adverb) |
 | `examples` | always 4 examples (API + custom to fill), separated by ` · ` |
 | `quotes` | first quote from the chosen sense |
@@ -109,7 +109,7 @@ Markdown table with columns:
 |--------|--------|
 | `phrasal_verb` | from `output/phrasal_verbs.md` |
 | `definition` | best-matching sense from API |
-| `ipa` | `pronunciations[0].text` |
+| `ipa` | `pronunciations[0].text`; self-generated (General American) if empty |
 | `examples` | always 4 examples (API + custom to fill), separated by ` · ` |
 | `quotes` | first quote from the chosen sense |
 | `tags` | sense tags |

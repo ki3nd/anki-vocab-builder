@@ -59,7 +59,7 @@ Priority:
 **Step 3 — Collect fields**
 
 - `definition` — sense definition string
-- `ipa` — `pronunciations[0].text` (empty if none)
+- `ipa` — `pronunciations[0].text`; if empty, generate IPA yourself (General American preferred)
 - `api_examples` — up to 2 from `sense.examples[]`
 - `quote` — `sense.quotes[0].text` (empty if none)
 - `tags` — `sense.tags[]` joined with `, ` (empty if none)
