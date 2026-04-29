@@ -1,0 +1,53 @@
+<div class="card-front">
+
+  <div class="word">{{Word}}</div>
+
+  {{#IPA}}<div class="ipa">{{IPA}}</div>{{/IPA}}
+
+  {{#AudioAmerican}}{{#AudioBritish}}
+  <div class="audio-row">
+    <div class="audio-item"><span class="audio-label">🇺🇸</span>{{AudioAmerican}}</div>
+    <div class="audio-item"><span class="audio-label">🇬🇧</span>{{AudioBritish}}</div>
+  </div>
+  {{/AudioBritish}}{{/AudioAmerican}}
+  {{#AudioAmerican}}{{^AudioBritish}}
+  <div class="audio-row">
+    <div class="audio-item"><span class="audio-label">🇺🇸</span>{{AudioAmerican}}</div>
+  </div>
+  {{/AudioBritish}}{{/AudioAmerican}}
+  {{^AudioAmerican}}{{#AudioBritish}}
+  <div class="audio-row">
+    <div class="audio-item"><span class="audio-label">🇬🇧</span>{{AudioBritish}}</div>
+  </div>
+  {{/AudioBritish}}{{/AudioAmerican}}
+
+  {{#PartOfSpeech}}
+  <div class="badge-row">
+    <span class="badge badge-pos">{{PartOfSpeech}}</span>
+  </div>
+  {{/PartOfSpeech}}
+
+  <hr class="divider">
+
+  {{#Sentence}}
+  <div class="sentence-block">
+    {{#SentenceAudio}}<div class="sentence-audio">{{SentenceAudio}}</div>{{/SentenceAudio}}
+    <div class="sentence">&ldquo;{{Sentence}}&rdquo;</div>
+  </div>
+  {{/Sentence}}
+
+  {{#Image}}
+  <div class="image-container">{{Image}}</div>
+  {{/Image}}
+
+  <div class="search-links">
+    <a href="https://dict.laban.vn/find?type=1&query={{text:Word}}">Laban</a>
+    <span class="sep">·</span>
+    <a href="https://dictionary.cambridge.org/dictionary/english/{{text:Word}}">Cambridge</a>
+    <span class="sep">·</span>
+    <a href="https://youglish.com/search/{{text:Word}}/all?">YouGlish</a>
+    <span class="sep">·</span>
+    <a href="http://images.google.com/search?tbm=isch&q={{text:Word}}">Images</a>
+  </div>
+
+</div>

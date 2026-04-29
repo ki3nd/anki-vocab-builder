@@ -1,0 +1,19 @@
+# Environment
+.env
+.venv/
+
+# Python
+__pycache__/
+*.pyc
+
+# Generated content
+output/
+tables/
+reading.md
+
+# Anki output
+output_anki/
+
+# OS
+.DS_Store
+Thumbs.db

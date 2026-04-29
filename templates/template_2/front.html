@@ -1,0 +1,35 @@
+<div class="card-front">
+
+  <div class="structure-label">Structure</div>
+  <div class="structure">{{Structure}}</div>
+
+  {{#Tags}}
+  <div class="badge-row" id="tags-front"></div>
+  {{/Tags}}
+
+  <hr class="divider">
+
+  <div class="sentence" id="front-sentence"></div>
+
+</div>
+
+<script>
+(function () {
+  var raw = "{{Examples}}";
+  if (raw && raw !== "{{Examples}}") {
+    var first = raw.split(" · ")[0].trim();
+    document.getElementById("front-sentence").innerHTML = "“" + first + "”";
+  }
+
+  var tags = "{{Tags}}";
+  var el = document.getElementById("tags-front");
+  if (tags && tags !== "{{Tags}}" && el) {
+    tags.split(",").forEach(function (t) {
+      var span = document.createElement("span");
+      span.className = "badge badge-tag";
+      span.textContent = t.trim();
+      el.appendChild(span);
+    });
+  }
+})();
+</script>
