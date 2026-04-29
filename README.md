@@ -13,10 +13,10 @@ reading.md → output/ (word lists) → tables/ (markdown) → output_anki/ (.ap
 3. **Build Anki** — generate `.apkg` decks with audio
 
 ```bash
-uv run build_anki_vocab.py                              # vocabulary
-uv run build_anki_vocab.py --input tables/phrasal_verbs.md   # phrasal verbs
-uv run build_anki_vocab.py --input tables/compound_nouns.md  # compound nouns
-uv run build_anki_sentence_structures.py                # sentence structures (no audio)
+uv run build_anki_deck.py --type vocabulary
+uv run build_anki_deck.py --type phrasal_verbs
+uv run build_anki_deck.py --type compound_nouns
+uv run build_anki_deck.py --type sentence_structures    # no audio
 ```
 
 ## Requirements
