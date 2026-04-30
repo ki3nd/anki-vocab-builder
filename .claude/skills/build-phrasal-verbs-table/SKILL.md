@@ -7,7 +7,7 @@ description: Builds a markdown phrasal verbs reference table from output/phrasal
 
 ## Overview
 
-Process each phrasal verb in `output/phrasal_verbs.md` one at a time: fetch API data (with base-verb fallback), choose the sense that best matches the reading context, generate exactly 4 examples, and append the row immediately.
+Process each phrasal verb in `output/phrasal_verbs.md` one at a time: fetch API data for the full phrasal verb, choose the sense that best matches the reading context, generate exactly 4 examples, and append the row immediately. If the API returns no data, go directly to fallback — do not fetch the base verb.
 
 ## When to Use
 
@@ -33,19 +33,16 @@ Process each phrasal verb in `output/phrasal_verbs.md` one at a time: fetch API 
 
 ### Per-phrasal-verb loop — repeat for every entry
 
-**Step 1 — Fetch (with fallback)**
+**Step 1 — Fetch**
 
-First, try the full phrasal verb:
+Fetch the full phrasal verb:
 ```bash
 uv run .claude/commands/fetch_word.py "<phrasal verb>" verb
 ```
 
-If that fails (exit code 1), try the **base verb** (first word only):
-```bash
-uv run .claude/commands/fetch_word.py "<base verb>" verb
-```
-
 Always quote the argument — it contains spaces.
+
+If the fetch fails (exit code 1) or returns no data, skip to **Fallback** immediately. Do not fetch the base verb.
 
 **Step 2 — Choose the best sense**
 
@@ -83,7 +80,7 @@ Join 4 examples with ` · `. Escape `|` as `\|`. No line breaks in cells.
 
 Append immediately. Do not wait for the full list.
 
-### Fallback — both fetches fail
+### Fallback — fetch fails or returns no data
 
 Do NOT skip. Fill the row yourself:
 - `definition` — the phrasal verb's own dictionary meaning in English; if multiple meanings, match `reading.md`
@@ -96,10 +93,10 @@ Do NOT skip. Fill the row yourself:
 
 | Rationalization | Reality |
 |---|---|
-| "The API doesn't have phrasal verbs, I'll skip them" | Use the base-verb fallback first; if that also fails, generate manually |
+| "The API doesn't have phrasal verbs, I'll skip them" | Go directly to fallback — generate the row manually |
+| "I'll fetch the base verb since the full phrase isn't found" | Do not fetch the base verb — fallback immediately |
 | "I'll write the example with just the base verb" | Custom examples must use the full phrasal verb form |
 | "I'll process them all then write at the end" | Append immediately after each one — do not batch |
-| "The base verb sense doesn't match the phrasal usage" | Look for a sense whose examples mention the phrasal usage, or use the fallback |
 
 ## Red Flags
 

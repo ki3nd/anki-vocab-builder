@@ -54,15 +54,12 @@ For each phrasal verb in the list, follow these steps **in order**, then **immed
 
 ### Step 1 — Fetch phrasal verb data
 
-First, try fetching the phrasal verb directly:
+Fetch the full phrasal verb directly:
 ```
 uv run .devin/skills/build-phrasal-verbs-table/fetch_word.py "<phrasal verb>" verb
 ```
 
-If that fails (exit code 1), fall back to fetching the **base verb** (first word of the phrasal verb) and look for a sense whose definition or examples mention the full phrasal usage:
-```
-uv run .devin/skills/build-phrasal-verbs-table/fetch_word.py "<base verb>" verb
-```
+If that fails (exit code 1) or returns no data, go directly to **Fallback**. Do not fetch the base verb.
 
 ### Step 2 — Choose the best sense
 
@@ -123,7 +120,7 @@ Append the completed row to `tables/phrasal_verbs.md` right away. Do not wait un
 
 ## Fallback — when the API returns no data
 
-If both the direct fetch and the base-verb fallback fail, **do NOT skip the phrasal verb**. Instead, fill the row yourself:
+If the fetch fails or returns no data, **do NOT skip the phrasal verb**. Fill the row yourself immediately:
 
 - **definition** — write the dictionary definition of the phrasal verb in English. The definition must be the phrasal verb's **own meaning** (not a paraphrase of how it is used in the reading), but when the phrasal verb has multiple meanings, pick the one that matches how it is used in `reading.md`.
 - **ipa** — write the IPA transcription yourself (General American preferred, for the base verb)
