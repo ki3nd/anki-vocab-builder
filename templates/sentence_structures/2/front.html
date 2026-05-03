@@ -1,0 +1,25 @@
+<div class="dl-front">
+
+  <div class="dl-word-wrap">
+    <span class="dl-word">{{Structure}}</span>
+  </div>
+
+  {{#Tags}}
+  <div class="dl-tags-row"><span class="dl-tags-badge">{{Tags}}</span></div>
+  {{/Tags}}
+
+  <hr class="dl-divider">
+
+  {{#Sentence}}
+  <div class="dl-sentence-block">
+    <div class="dl-sentence-header">
+      <span class="dl-section-label">Example</span>
+      {{#SentenceAudio}}<span class="dl-sent-audio">{{SentenceAudio}}</span>{{/SentenceAudio}}
+    </div>
+    <div class="dl-sentence-text">{{Sentence}}</div>
+  </div>
+  {{/Sentence}}
+
+  {{#Image}}<div class="dl-image">{{Image}}</div>{{/Image}}
+
+</div>

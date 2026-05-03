@@ -1,0 +1,88 @@
+<div class="card-back">
+
+  <div class="v2-word-wrap">
+    <span class="v2-word">{{PhrasalVerb}}</span>
+  </div>
+
+  {{#IPA}}<div class="v2-ipa">{{IPA}}</div>{{/IPA}}
+
+  {{#AudioAmerican}}{{#AudioBritish}}
+  <div class="v2-audio-row">
+    <div class="v2-audio-item"><span class="v2-audio-flag">🇺🇸</span>{{AudioAmerican}}</div>
+    <div class="v2-audio-item"><span class="v2-audio-flag">🇬🇧</span>{{AudioBritish}}</div>
+  </div>
+  {{/AudioBritish}}{{/AudioAmerican}}
+  {{#AudioAmerican}}{{^AudioBritish}}
+  <div class="v2-audio-row">
+    <div class="v2-audio-item"><span class="v2-audio-flag">🇺🇸</span>{{AudioAmerican}}</div>
+  </div>
+  {{/AudioBritish}}{{/AudioAmerican}}
+  {{^AudioAmerican}}{{#AudioBritish}}
+  <div class="v2-audio-row">
+    <div class="v2-audio-item"><span class="v2-audio-flag">🇬🇧</span>{{AudioBritish}}</div>
+  </div>
+  {{/AudioBritish}}{{/AudioAmerican}}
+
+  <hr class="v2-divider">
+
+  {{#Definition}}
+  <div class="v2-definition">{{Definition}}</div>
+  <hr class="v2-divider">
+  {{/Definition}}
+
+  {{#Examples}}
+  <div class="v2-section-header">
+    <span class="v2-section-label">Examples</span>
+  </div>
+  <div class="v2-examples-text">{{Examples}}</div>
+  {{/Examples}}
+
+  {{#Quote}}
+  <div class="v2-quote">{{Quote}}</div>
+  {{/Quote}}
+
+  {{#Tags}}
+  <div class="v2-meta-block" style="margin-top:12px;">
+    <span class="v2-meta-label">Tags</span>
+    <span class="v2-meta-value">{{Tags}}</span>
+  </div>
+  {{/Tags}}
+
+  {{#Synonyms}}{{#Antonyms}}
+  <div class="v2-meta-grid" style="margin-top:10px;">
+    <div class="v2-meta-block">
+      <span class="v2-meta-label">Synonyms</span>
+      <span class="v2-meta-value">{{Synonyms}}</span>
+    </div>
+    <div class="v2-meta-block">
+      <span class="v2-meta-label">Antonyms</span>
+      <span class="v2-meta-value">{{Antonyms}}</span>
+    </div>
+  </div>
+  {{/Antonyms}}{{/Synonyms}}
+  {{#Synonyms}}{{^Antonyms}}
+  <div class="v2-meta-block" style="margin-top:10px;">
+    <span class="v2-meta-label">Synonyms</span>
+    <span class="v2-meta-value">{{Synonyms}}</span>
+  </div>
+  {{/Antonyms}}{{/Synonyms}}
+  {{^Synonyms}}{{#Antonyms}}
+  <div class="v2-meta-block" style="margin-top:10px;">
+    <span class="v2-meta-label">Antonyms</span>
+    <span class="v2-meta-value">{{Antonyms}}</span>
+  </div>
+  {{/Antonyms}}{{/Synonyms}}
+
+  {{#Image}}<div class="v2-image">{{Image}}</div>{{/Image}}
+
+  <div class="v2-search-links">
+    <a href="https://dict.laban.vn/find?type=1&query={{text:PhrasalVerb}}">Laban</a>
+    <span class="sep">·</span>
+    <a href="https://dictionary.cambridge.org/dictionary/english/{{text:PhrasalVerb}}">Cambridge</a>
+    <span class="sep">·</span>
+    <a href="https://youglish.com/search/{{text:PhrasalVerb}}/all?">YouGlish</a>
+    <span class="sep">·</span>
+    <a href="http://images.google.com/search?tbm=isch&q={{text:PhrasalVerb}}">Images</a>
+  </div>
+
+</div>

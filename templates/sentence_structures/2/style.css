@@ -1,0 +1,259 @@
+/* ── Duolingo Design System — Sentence Structures Template 2 ─────────────── */
+
+:root {
+  --dl-green:        #58cc02;
+  --dl-green-dark:   #3f8f01;
+  --dl-green-light:  #d7ffb8;
+  --dl-sky:          #1cb0f6;
+  --dl-white:        #ffffff;
+  --dl-cloud:        #e5e5e5;
+  --dl-silver:       #afafaf;
+  --dl-graphite:     #777777;
+  --dl-charcoal:     #4b4b4b;
+  --dl-black:        #3c3c3c;
+
+  --dl-font-head:   'feather', 'Fredoka One', 'Baloo 2', ui-rounded, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --dl-font-body:   'din-round', 'Nunito Sans', 'Nunito', 'Varela Round', ui-rounded, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --dl-radius:  12px;
+  --dl-track:   0.053em;
+}
+
+/* ── Base ──────────────────────────────────────────────────────────────────── */
+.card {
+  font-family: var(--dl-font-body);
+  font-size: 15px;
+  line-height: 1.4;
+  letter-spacing: var(--dl-track);
+  background: var(--dl-white);
+  color: var(--dl-black);
+  padding: 24px 20px;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Structure — heading (32px) — shorter than vocab word ──────────────────── */
+.dl-word-wrap {
+  text-align: center;
+  margin: 0 0 10px;
+}
+
+.dl-word {
+  font-family: var(--dl-font-head);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--dl-green);
+  line-height: 1.2;
+  letter-spacing: 1.7px;
+}
+
+/* ── Tags row (front) — formality / exam badge ─────────────────────────────── */
+.dl-tags-row {
+  text-align: center;
+  margin: 4px 0 2px;
+}
+
+.dl-tags-badge {
+  display: inline-block;
+  font-family: var(--dl-font-body);
+  font-size: 13px;
+  line-height: 1.4;
+  font-weight: 700;
+  letter-spacing: var(--dl-track);
+  color: var(--dl-sky);
+  background: #f0faff;
+  border-radius: var(--dl-radius);
+  padding: 4px 14px;
+  border: 2px solid var(--dl-sky);
+}
+
+/* ── Divider ───────────────────────────────────────────────────────────────── */
+.dl-divider {
+  border: none;
+  border-top: 2px solid var(--dl-cloud);
+  margin: 16px 0;
+}
+
+/* ── Sentence block (front) — lesson card ──────────────────────────────────── */
+.dl-sentence-block {
+  background: var(--dl-green-light);
+  border-radius: var(--dl-radius);
+  padding: 14px 16px;
+  margin: 4px 0 0;
+}
+
+.dl-sentence-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.dl-sentence-text {
+  font-family: var(--dl-font-body);
+  font-size: 15px;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--dl-charcoal);
+  line-height: 1.4;
+  letter-spacing: var(--dl-track);
+}
+
+.dl-sent-audio {
+  font-size: 20px;
+  line-height: 1;
+}
+
+/* ── Section label ─────────────────────────────────────────────────────────── */
+.dl-section-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 14px 0 6px;
+}
+
+.dl-section-label {
+  font-family: var(--dl-font-body);
+  font-size: 13px;
+  line-height: 1.4;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: var(--dl-track);
+  color: var(--dl-silver);
+}
+
+/* ── Meaning — heading-sm ──────────────────────────────────────────────────── */
+.dl-definition {
+  font-family: var(--dl-font-body);
+  font-size: 19px;
+  font-weight: 500;
+  color: var(--dl-black);
+  line-height: 1.2;
+  letter-spacing: var(--dl-track);
+  text-align: left;
+  margin: 4px 0;
+}
+
+/* ── Examples — body ───────────────────────────────────────────────────────── */
+.dl-examples-text {
+  font-family: var(--dl-font-body);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--dl-charcoal);
+  line-height: 1.4;
+  letter-spacing: var(--dl-track);
+  text-align: left;
+}
+
+/* ── Equivalent — Sky Blue accent block, non-italic ───────────────────────── */
+.dl-equivalent {
+  font-family: var(--dl-font-body);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--dl-graphite);
+  border-left: 3px solid var(--dl-sky);
+  background: #f0faff;
+  border-radius: 0 var(--dl-radius) var(--dl-radius) 0;
+  padding: 8px 12px;
+  margin: 4px 0 0;
+  line-height: 1.4;
+  letter-spacing: var(--dl-track);
+}
+
+/* ── Meta (Tags) ───────────────────────────────────────────────────────────── */
+.dl-meta-top {
+  margin-top: 12px;
+}
+
+.dl-meta-block {
+  text-align: left;
+}
+
+.dl-meta-label {
+  font-family: var(--dl-font-body);
+  font-size: 13px;
+  line-height: 1.4;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: var(--dl-track);
+  color: var(--dl-silver);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.dl-meta-value {
+  font-family: var(--dl-font-body);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--dl-charcoal);
+  letter-spacing: var(--dl-track);
+  line-height: 1.4;
+}
+
+/* ── Night mode ────────────────────────────────────────────────────────────── */
+.night_mode .card {
+  background: #131f24;
+  color: #e5e5e5;
+}
+
+.night_mode .dl-word {
+  color: var(--dl-green);
+}
+
+.night_mode .dl-tags-badge {
+  color: var(--dl-sky);
+  background: #091824;
+  border-color: var(--dl-sky);
+}
+
+.night_mode .dl-divider {
+  border-top-color: #2a2a2a;
+}
+
+.night_mode .dl-sentence-block {
+  background: #1a3a0a;
+}
+
+.night_mode .dl-sentence-text {
+  color: #c8f0a0;
+}
+
+.night_mode .dl-definition {
+  color: #e5e5e5;
+}
+
+.night_mode .dl-examples-text {
+  color: #afafaf;
+}
+
+.night_mode .dl-equivalent {
+  background: #091824;
+  color: #afafaf;
+}
+
+.night_mode .dl-meta-value {
+  color: #afafaf;
+}
+
+.replay-button svg {
+  width: 22px;
+  height: 22px;
+}
+
+.replay-button svg circle {
+  fill: var(--dl-green);
+}
+
+.replay-button svg path {
+  stroke: var(--dl-white);
+  fill: var(--dl-white);
+}
+
+.night_mode .replay-button svg circle {
+  fill: var(--dl-green);
+}
+
+.night_mode .replay-button svg path {
+  stroke: #131f24;
+  fill: #131f24;
+}

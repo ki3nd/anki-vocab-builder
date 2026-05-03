@@ -1,0 +1,340 @@
+/* ── Anthropic Design System — Vocabulary v2 ─────────────────────────────── */
+
+:root {
+  --c-slate-dark:    #141413;
+  --c-ivory-light:   #faf9f5;
+  --c-ivory-medium:  #f0eee6;
+  --c-ivory-dark:    #e8e6dc;
+  --c-oat:           #e3dacc;
+  --c-cloud-light:   #d1cfc5;
+  --c-cloud-dark:    #87867f;
+  --c-slate-medium:  #3d3d3a;
+  --c-slate-light:   #5e5d59;
+  --c-clay:          #d97757;
+  --c-ember:         #c6613f;
+
+  --font-sans:  'DM Sans', 'Inter', ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-serif: 'Playfair Display', 'Lora', Georgia, ui-serif, serif;
+  --font-mono:  'JetBrains Mono', 'IBM Plex Mono', 'Courier New', ui-monospace, monospace;
+}
+
+/* ── Reset & base ───────────────────────────────────────────────────────────── */
+.card {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.4;
+  letter-spacing: -0.02px;
+  background: var(--c-ivory-light);
+  color: var(--c-slate-dark);
+  padding: 28px 22px 20px;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Word — Anthropic Serif at display scale ────────────────────────────────── */
+.v2-word-wrap {
+  text-align: center;
+  margin: 0 0 10px;
+}
+
+.v2-word {
+  font-family: var(--font-serif);
+  font-size: 46px;
+  font-weight: 400;
+  color: var(--c-slate-dark);
+  line-height: 1.1;
+  letter-spacing: -0.8px;
+  display: inline;
+  /* Anthropic underline-as-emphasis: clay accent on key term */
+  text-decoration: underline;
+  text-decoration-color: var(--c-clay);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 6px;
+}
+
+/* ── IPA — monospace metadata label ────────────────────────────────────────── */
+.v2-ipa {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--c-cloud-dark);
+  text-align: center;
+  letter-spacing: 0.01em;
+  margin: 0 0 10px;
+}
+
+/* ── Audio row ──────────────────────────────────────────────────────────────── */
+.v2-audio-row {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin: 8px 0;
+}
+
+.v2-audio-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 20px;
+}
+
+.v2-audio-flag {
+  font-size: 16px;
+  line-height: 1;
+}
+
+/* ── Part-of-speech — 0px radius border label (Anthropic ghost button) ──────── */
+.v2-pos-row {
+  text-align: center;
+  margin: 10px 0 6px;
+}
+
+.v2-pos {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--c-slate-dark);
+  border: 1px solid var(--c-slate-dark);
+  border-radius: 0;          /* Anthropic: 0px radius on all badges */
+  padding: 3px 10px;
+}
+
+/* ── Divider — hairline, no shadow ─────────────────────────────────────────── */
+.v2-divider {
+  border: none;
+  border-top: 1px solid var(--c-ivory-dark);
+  margin: 16px 0;
+  width: 100%;
+}
+
+/* ── Dark editorial card (sentence front / examples back) ───────────────────── */
+/* Anthropic: dark feature card = #141413, radius 8px for card (not 24px which is feature-size) */
+.v2-dark-card {
+  background: var(--c-slate-dark);
+  border-radius: 8px;
+  padding: 18px 20px;
+  margin: 4px 0 0;
+  text-align: left;
+}
+
+/* Sentence block on front (no dark background) */
+.v2-sentence-block {
+  text-align: left;
+  margin: 4px 0 0;
+}
+
+.v2-sentence-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+/* Sentence text on front */
+.v2-sentence-text {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-style: italic;
+  color: var(--c-slate-dark);
+  line-height: 1.65;
+  border-left: 2px solid var(--c-cloud-light);
+  padding-left: 12px;
+}
+
+/* Sentence audio inside dark card */
+.v2-sent-audio {
+  font-size: 20px;
+  line-height: 1;
+}
+
+
+/* Examples text on back (<br>-separated) */
+.v2-examples-text {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: var(--c-slate-dark);
+  line-height: 2;
+  text-align: left;
+}
+
+/* ── Section header (outside dark card) ─────────────────────────────────────── */
+.v2-section-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 16px 0 6px;
+}
+
+.v2-section-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--c-cloud-dark);
+}
+
+/* ── Definition ─────────────────────────────────────────────────────────────── */
+.v2-definition {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--c-slate-dark);
+  line-height: 1.55;
+  text-align: left;
+  margin: 4px 0;
+}
+
+/* ── Quote — clay left border, restrained ───────────────────────────────────── */
+.v2-quote {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-style: italic;
+  color: var(--c-cloud-dark);
+  border-left: 2px solid var(--c-clay);   /* only chromatic accent: clay */
+  background: var(--c-ivory-medium);
+  border-radius: 0 4px 4px 0;
+  padding: 8px 12px;
+  margin: 14px 0;
+  text-align: left;
+  line-height: 1.55;
+}
+
+/* ── Metadata labels (TAGS / SYNONYMS / ANTONYMS) ───────────────────────────── */
+/* Anthropic: pure typographic label, no pill, no background */
+.v2-meta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 10px 0;
+}
+
+.v2-meta-block {
+  text-align: left;
+}
+
+.v2-meta-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--c-cloud-dark);
+  display: block;
+  margin-bottom: 3px;
+}
+
+.v2-meta-value {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: var(--c-slate-dark);
+  line-height: 1.5;
+}
+
+/* ── Image ──────────────────────────────────────────────────────────────────── */
+.v2-image {
+  margin: 14px auto;
+  max-width: 360px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.v2-image img {
+  max-width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Search links ────────────────────────────────────────────────────────────── */
+.v2-search-links {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--c-cloud-dark);
+  text-align: center;
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--c-ivory-dark);
+}
+
+.v2-search-links a {
+  color: var(--c-slate-dark);
+  text-decoration: none;
+}
+
+.v2-search-links a:hover {
+  text-decoration: underline;
+}
+
+.v2-search-links .sep {
+  color: var(--c-cloud-light);
+  margin: 0 5px;
+}
+
+/* ── Night mode ──────────────────────────────────────────────────────────────── */
+/* Background shifts to dark but NOT pure black — Anthropic: never #000 */
+.night_mode .card {
+  background: #1c1b18;
+  color: var(--c-ivory-dark);
+}
+
+.night_mode .v2-word {
+  color: var(--c-ivory-light);
+  text-decoration-color: var(--c-clay);
+}
+
+.night_mode .v2-ipa {
+  color: var(--c-cloud-dark);
+}
+
+.night_mode .v2-pos {
+  color: var(--c-ivory-dark);
+  border-color: var(--c-slate-medium);
+}
+
+.night_mode .v2-divider {
+  border-top-color: #2a2925;
+}
+
+.night_mode .v2-dark-card {
+  background: #0e0e0c;
+}
+
+.night_mode .v2-sentence-text {
+  color: var(--c-ivory-dark);
+  border-left-color: var(--c-slate-medium);
+}
+
+.night_mode .v2-examples-text {
+  color: var(--c-ivory-dark);
+}
+
+.night_mode .v2-definition {
+  color: var(--c-ivory-dark);
+}
+
+.night_mode .v2-quote {
+  background: #242320;
+  color: var(--c-cloud-dark);
+}
+
+.night_mode .v2-meta-value {
+  color: var(--c-ivory-dark);
+}
+
+.night_mode .v2-search-links {
+  border-top-color: #2a2925;
+}
+
+.night_mode .v2-search-links a {
+  color: var(--c-ivory-medium);
+}
+
+.replay-button svg {
+  width: 20px;
+  height: 20px;
+}

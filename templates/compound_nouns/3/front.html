@@ -1,0 +1,50 @@
+<div class="lt3-front">
+
+  <div class="lt3-word-wrap">
+    <span class="lt3-word">{{CompoundNoun}}</span>
+  </div>
+
+  {{#IPA}}<div class="lt3-ipa">{{IPA}}</div>{{/IPA}}
+
+  {{#AudioAmerican}}{{#AudioBritish}}
+  <div class="lt3-audio-row">
+    <div class="lt3-audio-item"><span class="lt3-audio-flag">🇺🇸</span>{{AudioAmerican}}</div>
+    <div class="lt3-audio-item"><span class="lt3-audio-flag">🇬🇧</span>{{AudioBritish}}</div>
+  </div>
+  {{/AudioBritish}}{{/AudioAmerican}}
+  {{#AudioAmerican}}{{^AudioBritish}}
+  <div class="lt3-audio-row">
+    <div class="lt3-audio-item"><span class="lt3-audio-flag">🇺🇸</span>{{AudioAmerican}}</div>
+  </div>
+  {{/AudioBritish}}{{/AudioAmerican}}
+  {{^AudioAmerican}}{{#AudioBritish}}
+  <div class="lt3-audio-row">
+    <div class="lt3-audio-item"><span class="lt3-audio-flag">🇬🇧</span>{{AudioBritish}}</div>
+  </div>
+  {{/AudioBritish}}{{/AudioAmerican}}
+
+  <hr class="lt3-divider">
+
+  {{#Sentence}}
+  <div class="lt3-sentence-block">
+    <div class="lt3-sentence-header">
+      <span class="lt3-section-label">Example</span>
+      {{#SentenceAudio}}<span class="lt3-sent-audio">{{SentenceAudio}}</span>{{/SentenceAudio}}
+    </div>
+    <div class="lt3-sentence-text">{{Sentence}}</div>
+  </div>
+  {{/Sentence}}
+
+  {{#Image}}<div class="lt3-image">{{Image}}</div>{{/Image}}
+
+  <div class="lt3-search-links">
+    <a href="https://dict.laban.vn/find?type=1&query={{text:CompoundNoun}}">Laban</a>
+    <span class="sep">·</span>
+    <a href="https://dictionary.cambridge.org/dictionary/english/{{text:CompoundNoun}}">Cambridge</a>
+    <span class="sep">·</span>
+    <a href="https://youglish.com/search/{{text:CompoundNoun}}/all?">YouGlish</a>
+    <span class="sep">·</span>
+    <a href="http://images.google.com/search?tbm=isch&q={{text:CompoundNoun}}">Images</a>
+  </div>
+
+</div>

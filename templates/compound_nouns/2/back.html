@@ -1,0 +1,88 @@
+<div class="dl-back">
+
+  <div class="dl-word-wrap">
+    <span class="dl-word">{{CompoundNoun}}</span>
+  </div>
+
+  {{#IPA}}<div class="dl-ipa">{{IPA}}</div>{{/IPA}}
+
+  {{#AudioAmerican}}{{#AudioBritish}}
+  <div class="dl-audio-row">
+    <div class="dl-audio-item"><span class="dl-audio-flag">🇺🇸</span>{{AudioAmerican}}</div>
+    <div class="dl-audio-item"><span class="dl-audio-flag">🇬🇧</span>{{AudioBritish}}</div>
+  </div>
+  {{/AudioBritish}}{{/AudioAmerican}}
+  {{#AudioAmerican}}{{^AudioBritish}}
+  <div class="dl-audio-row">
+    <div class="dl-audio-item"><span class="dl-audio-flag">🇺🇸</span>{{AudioAmerican}}</div>
+  </div>
+  {{/AudioBritish}}{{/AudioAmerican}}
+  {{^AudioAmerican}}{{#AudioBritish}}
+  <div class="dl-audio-row">
+    <div class="dl-audio-item"><span class="dl-audio-flag">🇬🇧</span>{{AudioBritish}}</div>
+  </div>
+  {{/AudioBritish}}{{/AudioAmerican}}
+
+  <hr class="dl-divider">
+
+  {{#Definition}}
+  <div class="dl-definition">{{Definition}}</div>
+  <hr class="dl-divider">
+  {{/Definition}}
+
+  {{#Examples}}
+  <div class="dl-section-header">
+    <span class="dl-section-label">Examples</span>
+  </div>
+  <div class="dl-examples-text">{{Examples}}</div>
+  {{/Examples}}
+
+  {{#Quote}}
+  <div class="dl-quote">{{Quote}}</div>
+  {{/Quote}}
+
+  {{#Tags}}
+  <div class="dl-meta-block dl-meta-top">
+    <span class="dl-meta-label">Tags</span>
+    <span class="dl-meta-value">{{Tags}}</span>
+  </div>
+  {{/Tags}}
+
+  {{#Synonyms}}{{#Antonyms}}
+  <div class="dl-meta-grid dl-meta-top">
+    <div class="dl-meta-block">
+      <span class="dl-meta-label">Synonyms</span>
+      <span class="dl-meta-value">{{Synonyms}}</span>
+    </div>
+    <div class="dl-meta-block">
+      <span class="dl-meta-label">Antonyms</span>
+      <span class="dl-meta-value">{{Antonyms}}</span>
+    </div>
+  </div>
+  {{/Antonyms}}{{/Synonyms}}
+  {{#Synonyms}}{{^Antonyms}}
+  <div class="dl-meta-block dl-meta-top">
+    <span class="dl-meta-label">Synonyms</span>
+    <span class="dl-meta-value">{{Synonyms}}</span>
+  </div>
+  {{/Antonyms}}{{/Synonyms}}
+  {{^Synonyms}}{{#Antonyms}}
+  <div class="dl-meta-block dl-meta-top">
+    <span class="dl-meta-label">Antonyms</span>
+    <span class="dl-meta-value">{{Antonyms}}</span>
+  </div>
+  {{/Antonyms}}{{/Synonyms}}
+
+  {{#Image}}<div class="dl-image">{{Image}}</div>{{/Image}}
+
+  <div class="dl-search-links">
+    <a href="https://dict.laban.vn/find?type=1&query={{text:CompoundNoun}}">Laban</a>
+    <span class="sep">·</span>
+    <a href="https://dictionary.cambridge.org/dictionary/english/{{text:CompoundNoun}}">Cambridge</a>
+    <span class="sep">·</span>
+    <a href="https://youglish.com/search/{{text:CompoundNoun}}/all?">YouGlish</a>
+    <span class="sep">·</span>
+    <a href="http://images.google.com/search?tbm=isch&q={{text:CompoundNoun}}">Images</a>
+  </div>
+
+</div>

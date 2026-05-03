@@ -1,0 +1,23 @@
+<div class="card-front">
+
+  <div class="ss-structure-wrap">
+    <span class="ss-structure">{{Structure}}</span>
+  </div>
+
+  {{#Tags}}
+  <div class="ss-tags-row">{{Tags}}</div>
+  {{/Tags}}
+
+  <hr class="v2-divider">
+
+  {{#Sentence}}
+  <div class="v2-sentence-block">
+    <div class="v2-sentence-header">
+      <span class="v2-section-label">Example</span>
+      {{#SentenceAudio}}<span class="v2-sent-audio">{{SentenceAudio}}</span>{{/SentenceAudio}}
+    </div>
+    <div class="v2-sentence-text">{{Sentence}}</div>
+  </div>
+  {{/Sentence}}
+
+</div>

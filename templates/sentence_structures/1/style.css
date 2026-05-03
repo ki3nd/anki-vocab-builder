@@ -1,0 +1,220 @@
+/* ── Anthropic Design System — Sentence Structures ───────────────────────── */
+
+:root {
+  --c-slate-dark:    #141413;
+  --c-ivory-light:   #faf9f5;
+  --c-ivory-medium:  #f0eee6;
+  --c-ivory-dark:    #e8e6dc;
+  --c-oat:           #e3dacc;
+  --c-cloud-light:   #d1cfc5;
+  --c-cloud-dark:    #87867f;
+  --c-slate-medium:  #3d3d3a;
+  --c-slate-light:   #5e5d59;
+  --c-clay:          #d97757;
+  --c-ember:         #c6613f;
+
+  --font-sans:  'DM Sans', 'Inter', ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-serif: 'Playfair Display', 'Lora', Georgia, ui-serif, serif;
+  --font-mono:  'JetBrains Mono', 'IBM Plex Mono', 'Courier New', ui-monospace, monospace;
+}
+
+/* ── Reset & base ───────────────────────────────────────────────────────────── */
+.card {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.4;
+  letter-spacing: -0.02px;
+  background: var(--c-ivory-light);
+  color: var(--c-slate-dark);
+  padding: 28px 22px 20px;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Structure — monospace pattern display ──────────────────────────────────── */
+.ss-structure-wrap {
+  text-align: center;
+  margin: 0 0 14px;
+}
+
+.ss-structure {
+  font-family: var(--font-mono);
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--c-slate-dark);
+  line-height: 1.35;
+  letter-spacing: -0.3px;
+  display: inline;
+  text-decoration: underline;
+  text-decoration-color: var(--c-clay);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+}
+
+/* ── Tags row on front ──────────────────────────────────────────────────────── */
+.ss-tags-row {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--c-cloud-dark);
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* ── Divider — hairline, no shadow ─────────────────────────────────────────── */
+.v2-divider {
+  border: none;
+  border-top: 1px solid var(--c-ivory-dark);
+  margin: 16px 0;
+  width: 100%;
+}
+
+/* ── Sentence block (front) ─────────────────────────────────────────────────── */
+.v2-sentence-block {
+  text-align: left;
+  margin: 4px 0 0;
+}
+
+.v2-sentence-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.v2-sentence-text {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-style: italic;
+  color: var(--c-slate-dark);
+  line-height: 1.65;
+  border-left: 2px solid var(--c-cloud-light);
+  padding-left: 12px;
+}
+
+.v2-sent-audio {
+  font-size: 20px;
+  line-height: 1;
+}
+
+/* ── Section header ─────────────────────────────────────────────────────────── */
+.v2-section-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 16px 0 6px;
+}
+
+.v2-section-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--c-cloud-dark);
+}
+
+/* ── Meaning / Definition ───────────────────────────────────────────────────── */
+.v2-definition {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--c-slate-dark);
+  line-height: 1.6;
+  text-align: left;
+  margin: 4px 0;
+}
+
+/* ── Examples ───────────────────────────────────────────────────────────────── */
+.v2-examples-text {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: var(--c-slate-dark);
+  line-height: 2;
+  text-align: left;
+}
+
+/* ── Equivalent — clay left border quote block ──────────────────────────────── */
+.v2-quote {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--c-slate-light);
+  border-left: 2px solid var(--c-clay);
+  background: var(--c-ivory-medium);
+  border-radius: 0 4px 4px 0;
+  padding: 8px 12px;
+  margin: 6px 0;
+  text-align: left;
+  line-height: 1.7;
+}
+
+/* ── Metadata labels ────────────────────────────────────────────────────────── */
+.v2-meta-block {
+  text-align: left;
+}
+
+.v2-meta-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--c-cloud-dark);
+  display: block;
+  margin-bottom: 3px;
+}
+
+.v2-meta-value {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  color: var(--c-slate-dark);
+  line-height: 1.5;
+}
+
+/* ── Night mode ──────────────────────────────────────────────────────────────── */
+.night_mode .card {
+  background: #1c1b18;
+  color: var(--c-ivory-dark);
+}
+
+.night_mode .ss-structure {
+  color: var(--c-ivory-light);
+  text-decoration-color: var(--c-clay);
+}
+
+.night_mode .ss-tags-row {
+  color: var(--c-cloud-dark);
+}
+
+.night_mode .v2-divider {
+  border-top-color: #2a2925;
+}
+
+.night_mode .v2-definition {
+  color: var(--c-ivory-dark);
+}
+
+.night_mode .v2-examples-text {
+  color: var(--c-ivory-dark);
+}
+
+.night_mode .v2-quote {
+  background: #242320;
+  color: var(--c-cloud-dark);
+}
+
+.night_mode .v2-meta-value {
+  color: var(--c-ivory-dark);
+}
+
+.night_mode .v2-sentence-text {
+  color: var(--c-ivory-dark);
+  border-left-color: var(--c-slate-medium);
+}
+
+.replay-button svg {
+  width: 20px;
+  height: 20px;
+}

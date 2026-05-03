@@ -1,0 +1,88 @@
+<div class="lt3-back">
+
+  <div class="lt3-word-wrap">
+    <span class="lt3-word">{{CompoundNoun}}</span>
+  </div>
+
+  {{#IPA}}<div class="lt3-ipa">{{IPA}}</div>{{/IPA}}
+
+  {{#AudioAmerican}}{{#AudioBritish}}
+  <div class="lt3-audio-row">
+    <div class="lt3-audio-item"><span class="lt3-audio-flag">🇺🇸</span>{{AudioAmerican}}</div>
+    <div class="lt3-audio-item"><span class="lt3-audio-flag">🇬🇧</span>{{AudioBritish}}</div>
+  </div>
+  {{/AudioBritish}}{{/AudioAmerican}}
+  {{#AudioAmerican}}{{^AudioBritish}}
+  <div class="lt3-audio-row">
+    <div class="lt3-audio-item"><span class="lt3-audio-flag">🇺🇸</span>{{AudioAmerican}}</div>
+  </div>
+  {{/AudioBritish}}{{/AudioAmerican}}
+  {{^AudioAmerican}}{{#AudioBritish}}
+  <div class="lt3-audio-row">
+    <div class="lt3-audio-item"><span class="lt3-audio-flag">🇬🇧</span>{{AudioBritish}}</div>
+  </div>
+  {{/AudioBritish}}{{/AudioAmerican}}
+
+  <hr class="lt3-divider">
+
+  {{#Definition}}
+  <div class="lt3-definition">{{Definition}}</div>
+  <hr class="lt3-divider">
+  {{/Definition}}
+
+  {{#Examples}}
+  <div class="lt3-examples-block">
+    <span class="lt3-section-label">Examples</span>
+    <div class="lt3-examples-text">{{Examples}}</div>
+  </div>
+  {{/Examples}}
+
+  {{#Quote}}
+  <div class="lt3-quote">{{Quote}}</div>
+  {{/Quote}}
+
+  {{#Tags}}
+  <div class="lt3-tags-block">
+    <span class="lt3-section-label">Tags</span>
+    <span class="lt3-tags-value">{{Tags}}</span>
+  </div>
+  {{/Tags}}
+
+  {{#Synonyms}}{{#Antonyms}}
+  <div class="lt3-meta-grid">
+    <div class="lt3-syn-block">
+      <span class="lt3-meta-label">Synonyms</span>
+      <span class="lt3-meta-value">{{Synonyms}}</span>
+    </div>
+    <div class="lt3-ant-block">
+      <span class="lt3-meta-label lt3-meta-label--light">Antonyms</span>
+      <span class="lt3-meta-value lt3-meta-value--light">{{Antonyms}}</span>
+    </div>
+  </div>
+  {{/Antonyms}}{{/Synonyms}}
+  {{#Synonyms}}{{^Antonyms}}
+  <div class="lt3-syn-block" style="margin-top:10px;">
+    <span class="lt3-meta-label">Synonyms</span>
+    <span class="lt3-meta-value">{{Synonyms}}</span>
+  </div>
+  {{/Antonyms}}{{/Synonyms}}
+  {{^Synonyms}}{{#Antonyms}}
+  <div class="lt3-ant-block" style="margin-top:10px;">
+    <span class="lt3-meta-label lt3-meta-label--light">Antonyms</span>
+    <span class="lt3-meta-value lt3-meta-value--light">{{Antonyms}}</span>
+  </div>
+  {{/Antonyms}}{{/Synonyms}}
+
+  {{#Image}}<div class="lt3-image">{{Image}}</div>{{/Image}}
+
+  <div class="lt3-search-links">
+    <a href="https://dict.laban.vn/find?type=1&query={{text:CompoundNoun}}">Laban</a>
+    <span class="sep">·</span>
+    <a href="https://dictionary.cambridge.org/dictionary/english/{{text:CompoundNoun}}">Cambridge</a>
+    <span class="sep">·</span>
+    <a href="https://youglish.com/search/{{text:CompoundNoun}}/all?">YouGlish</a>
+    <span class="sep">·</span>
+    <a href="http://images.google.com/search?tbm=isch&q={{text:CompoundNoun}}">Images</a>
+  </div>
+
+</div>

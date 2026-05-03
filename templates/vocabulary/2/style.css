@@ -1,0 +1,345 @@
+/* ── Duolingo Design System — Vocabulary Template 2 ──────────────────────── */
+
+:root {
+  --dl-green:        #58cc02;
+  --dl-green-dark:   #3f8f01;
+  --dl-green-light:  #d7ffb8;
+  --dl-sky:          #1cb0f6;
+  --dl-white:        #ffffff;
+  --dl-cloud:        #e5e5e5;
+  --dl-silver:       #afafaf;
+  --dl-graphite:     #777777;
+  --dl-charcoal:     #4b4b4b;
+  --dl-black:        #3c3c3c;
+
+  --dl-font-head:   'feather', 'Fredoka One', 'Baloo 2', ui-rounded, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --dl-font-body:   'din-round', 'Nunito Sans', 'Nunito', 'Varela Round', ui-rounded, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --dl-radius:  12px;
+  --dl-track:   0.053em;
+}
+
+/* ── Base ──────────────────────────────────────────────────────────────────── */
+.card {
+  font-family: var(--dl-font-body);
+  font-size: 15px;
+  line-height: 1.4;
+  letter-spacing: var(--dl-track);
+  background: var(--dl-white);
+  color: var(--dl-black);
+  padding: 24px 20px;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Word — Duo Green headline ─────────────────────────────────────────────── */
+.dl-word-wrap {
+  text-align: center;
+  margin: 0 0 8px;
+}
+
+.dl-word {
+  font-family: var(--dl-font-head);
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--dl-green);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+/* ── IPA — caption ─────────────────────────────────────────────────────────── */
+.dl-ipa {
+  font-family: var(--dl-font-body);
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 500;
+  color: var(--dl-silver);
+  text-align: center;
+  letter-spacing: var(--dl-track);
+  margin: 0 0 10px;
+}
+
+/* ── Audio row ─────────────────────────────────────────────────────────────── */
+.dl-audio-row {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin: 6px 0;
+}
+
+.dl-audio-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 20px;
+}
+
+.dl-audio-flag {
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* ── Part of Speech — Duolingo 3D pill ─────────────────────────────────────── */
+.dl-pos-row {
+  text-align: center;
+  margin: 12px 0 4px;
+}
+
+.dl-pos {
+  display: inline-block;
+  font-family: var(--dl-font-body);
+  font-size: 13px;
+  line-height: 1.4;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: var(--dl-track);
+  color: var(--dl-green-dark);
+  background: var(--dl-green-light);
+  border-radius: var(--dl-radius);
+  padding: 5px 18px;
+  box-shadow: 0 3px 0 var(--dl-green-dark);
+}
+
+/* ── Divider ───────────────────────────────────────────────────────────────── */
+.dl-divider {
+  border: none;
+  border-top: 2px solid var(--dl-cloud);
+  margin: 16px 0;
+}
+
+/* ── Sentence block (front) — lesson card ──────────────────────────────────── */
+.dl-sentence-block {
+  background: var(--dl-green-light);
+  border-radius: var(--dl-radius);
+  padding: 14px 16px;
+  margin: 4px 0 0;
+}
+
+.dl-sentence-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.dl-sentence-text {
+  font-family: var(--dl-font-body);
+  font-size: 15px;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--dl-charcoal);
+  line-height: 1.4;
+  letter-spacing: var(--dl-track);
+}
+
+.dl-sent-audio {
+  font-size: 20px;
+  line-height: 1;
+}
+
+/* ── Section label ─────────────────────────────────────────────────────────── */
+.dl-section-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 14px 0 6px;
+}
+
+.dl-section-label {
+  font-family: var(--dl-font-body);
+  font-size: 13px;
+  line-height: 1.4;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: var(--dl-track);
+  color: var(--dl-silver);
+}
+
+/* ── Definition — heading-sm ───────────────────────────────────────────────── */
+.dl-definition {
+  font-family: var(--dl-font-body);
+  font-size: 19px;
+  font-weight: 500;
+  color: var(--dl-black);
+  line-height: 1.2;
+  letter-spacing: var(--dl-track);
+  text-align: left;
+  margin: 4px 0;
+}
+
+/* ── Examples — body ───────────────────────────────────────────────────────── */
+.dl-examples-text {
+  font-family: var(--dl-font-body);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--dl-charcoal);
+  line-height: 1.4;
+  letter-spacing: var(--dl-track);
+  text-align: left;
+}
+
+/* ── Quote — Sky Blue left accent ──────────────────────────────────────────── */
+.dl-quote {
+  font-family: var(--dl-font-body);
+  font-size: 13px;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--dl-graphite);
+  border-left: 3px solid var(--dl-sky);
+  background: #f0faff;
+  border-radius: 0 var(--dl-radius) var(--dl-radius) 0;
+  padding: 8px 12px;
+  margin: 12px 0;
+  line-height: 1.4;
+  letter-spacing: var(--dl-track);
+}
+
+/* ── Meta (Tags / Synonyms / Antonyms) ─────────────────────────────────────── */
+.dl-meta-top {
+  margin-top: 12px;
+}
+
+.dl-meta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.dl-meta-block {
+  text-align: left;
+}
+
+.dl-meta-label {
+  font-family: var(--dl-font-body);
+  font-size: 13px;
+  line-height: 1.4;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: var(--dl-track);
+  color: var(--dl-silver);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.dl-meta-value {
+  font-family: var(--dl-font-body);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--dl-charcoal);
+  letter-spacing: var(--dl-track);
+  line-height: 1.4;
+}
+
+/* ── Image ─────────────────────────────────────────────────────────────────── */
+.dl-image {
+  margin: 14px auto;
+  max-width: 360px;
+  border-radius: var(--dl-radius);
+  overflow: hidden;
+}
+
+.dl-image img {
+  max-width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Search links ──────────────────────────────────────────────────────────── */
+.dl-search-links {
+  font-family: var(--dl-font-body);
+  font-size: 13px;
+  line-height: 1.4;
+  font-weight: 700;
+  letter-spacing: var(--dl-track);
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 14px;
+  border-top: 2px solid var(--dl-cloud);
+}
+
+.dl-search-links a {
+  color: var(--dl-sky);
+  text-decoration: none;
+}
+
+.dl-search-links .sep {
+  color: var(--dl-cloud);
+  margin: 0 6px;
+}
+
+/* ── Night mode ────────────────────────────────────────────────────────────── */
+.night_mode .card {
+  background: #131f24;
+  color: #e5e5e5;
+}
+
+.night_mode .dl-word {
+  color: var(--dl-green);
+}
+
+.night_mode .dl-ipa {
+  color: #6b7280;
+}
+
+.night_mode .dl-pos {
+  color: var(--dl-green);
+  background: #1a3a0a;
+  box-shadow: 0 3px 0 #0f2206;
+}
+
+.night_mode .dl-divider {
+  border-top-color: #2a2a2a;
+}
+
+.night_mode .dl-sentence-block {
+  background: #1a3a0a;
+}
+
+.night_mode .dl-sentence-text {
+  color: #c8f0a0;
+}
+
+.night_mode .dl-definition {
+  color: #e5e5e5;
+}
+
+.night_mode .dl-examples-text {
+  color: #afafaf;
+}
+
+.night_mode .dl-quote {
+  background: #091824;
+  color: #afafaf;
+}
+
+.night_mode .dl-meta-value {
+  color: #afafaf;
+}
+
+.night_mode .dl-search-links {
+  border-top-color: #2a2a2a;
+}
+
+.replay-button svg {
+  width: 22px;
+  height: 22px;
+}
+
+.replay-button svg circle {
+  fill: var(--dl-green);
+}
+
+.replay-button svg path {
+  stroke: var(--dl-white);
+  fill: var(--dl-white);
+}
+
+.night_mode .replay-button svg circle {
+  fill: var(--dl-green);
+}
+
+.night_mode .replay-button svg path {
+  stroke: #131f24;
+  fill: #131f24;
+}

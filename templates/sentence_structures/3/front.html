@@ -1,0 +1,25 @@
+<div class="lt3-front">
+
+  <div class="lt3-word-wrap">
+    <span class="lt3-word">{{Structure}}</span>
+  </div>
+
+  {{#Tags}}
+  <div class="lt3-pos-row"><span class="lt3-pos">{{Tags}}</span></div>
+  {{/Tags}}
+
+  <hr class="lt3-divider">
+
+  {{#Sentence}}
+  <div class="lt3-sentence-block">
+    <div class="lt3-sentence-header">
+      <span class="lt3-section-label">Example</span>
+      {{#SentenceAudio}}<span class="lt3-sent-audio">{{SentenceAudio}}</span>{{/SentenceAudio}}
+    </div>
+    <div class="lt3-sentence-text">{{Sentence}}</div>
+  </div>
+  {{/Sentence}}
+
+  {{#Image}}<div class="lt3-image">{{Image}}</div>{{/Image}}
+
+</div>

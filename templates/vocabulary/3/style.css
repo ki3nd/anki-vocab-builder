@@ -1,0 +1,391 @@
+/* ── Linktree Design System — Vocabulary Template 3 ──────────────────────── */
+
+:root {
+  --lt-forest-green:    #254f1a;
+  --lt-chartreuse:      #d2e823;
+  --lt-hydrangea:       #2665d6;
+  --lt-dahlia:          #502274;
+  --lt-currant:         #780016;
+  --lt-lavender:        #e9c0e9;
+  --lt-iris:            #061492;
+  --lt-goldenrod:       #d6a337;
+  --lt-graphite:        #1e2330;
+  --lt-white:           #ffffff;
+  --lt-marble:          #f3f3f1;
+  --lt-lunar-dust:      #e8efd6;
+  --lt-slate:           #676b5f;
+  --lt-whisper:         #adadad;
+  --lt-black:           #000000;
+
+  --lt-font: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  --lt-radius-card:     32px;
+  --lt-radius-pill:     99px;
+}
+
+/* ── Base ──────────────────────────────────────────────────────────────────── */
+.card {
+  font-family: var(--lt-font);
+  font-size: 15px;
+  line-height: 1.5;
+  background: var(--lt-marble);
+  color: var(--lt-graphite);
+  padding: 26px 20px 20px;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Word — Inter 800, Hydrangea Blue ─────────────────────────────────────── */
+.lt3-word-wrap {
+  text-align: center;
+  margin: 0 0 8px;
+}
+
+.lt3-word {
+  font-family: var(--lt-font);
+  font-size: 52px;
+  font-weight: 800;
+  color: var(--lt-hydrangea);
+  line-height: 1.06;
+  letter-spacing: -0.01em;
+}
+
+/* ── IPA ────────────────────────────────────────────────────────────────────── */
+.lt3-ipa {
+  font-family: var(--lt-font);
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--lt-slate);
+  text-align: center;
+  letter-spacing: 0.01em;
+  margin: 0 0 10px;
+}
+
+/* ── Audio row ──────────────────────────────────────────────────────────────── */
+.lt3-audio-row {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin: 6px 0;
+}
+
+.lt3-audio-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 20px;
+}
+
+.lt3-audio-flag {
+  font-size: 16px;
+  line-height: 1;
+}
+
+/* ── Part of Speech — Chartreuse Pop pill (primary CTA style) ──────────────── */
+.lt3-pos-row {
+  text-align: center;
+  margin: 12px 0 4px;
+}
+
+.lt3-pos {
+  display: inline-block;
+  font-family: var(--lt-font);
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--lt-graphite);
+  background: var(--lt-chartreuse);
+  border-radius: var(--lt-radius-pill);
+  padding: 6px 20px;
+}
+
+/* ── Divider ────────────────────────────────────────────────────────────────── */
+.lt3-divider {
+  border: none;
+  border-top: 1px solid var(--lt-lunar-dust);
+  margin: 16px 0;
+}
+
+/* ── Sentence block (front) — Forest Green feature highlight card ───────────── */
+.lt3-sentence-block {
+  background: var(--lt-forest-green);
+  border-radius: var(--lt-radius-card);
+  padding: 20px 22px;
+  margin: 4px 0 0;
+}
+
+.lt3-sentence-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.lt3-sentence-text {
+  font-family: var(--lt-font);
+  font-size: 15px;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--lt-white);
+  line-height: 1.5;
+}
+
+.lt3-sent-audio {
+  font-size: 20px;
+  line-height: 1;
+}
+
+/* ── Section label — uppercase, muted ──────────────────────────────────────── */
+.lt3-section-label {
+  font-family: var(--lt-font);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--lt-white);
+  opacity: 0.7;
+}
+
+/* Section label outside colored blocks */
+.lt3-examples-block .lt3-section-label,
+.lt3-tags-block .lt3-section-label {
+  color: var(--lt-slate);
+  opacity: 1;
+}
+
+/* ── Definition ─────────────────────────────────────────────────────────────── */
+.lt3-definition {
+  font-family: var(--lt-font);
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--lt-graphite);
+  line-height: 1.4;
+  text-align: left;
+  margin: 4px 0;
+}
+
+/* ── Examples block — Lunar Dust card ──────────────────────────────────────── */
+.lt3-examples-block {
+  background: var(--lt-lunar-dust);
+  border-radius: var(--lt-radius-card);
+  padding: 16px 20px;
+  margin: 4px 0 0;
+}
+
+.lt3-examples-text {
+  font-family: var(--lt-font);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--lt-graphite);
+  line-height: 2;
+  text-align: left;
+  margin-top: 8px;
+}
+
+/* ── Quote — Hydrangea Blue left border ─────────────────────────────────────── */
+.lt3-quote {
+  font-family: var(--lt-font);
+  font-size: 13px;
+  font-style: italic;
+  color: var(--lt-slate);
+  border-left: 3px solid var(--lt-hydrangea);
+  background: var(--lt-white);
+  border-radius: 0 8px 8px 0;
+  padding: 10px 14px;
+  margin: 14px 0;
+  line-height: 1.5;
+}
+
+/* ── Tags block — Lavender Mist card ───────────────────────────────────────── */
+.lt3-tags-block {
+  background: var(--lt-lavender);
+  border-radius: var(--lt-radius-pill);
+  padding: 10px 20px;
+  margin: 12px 0 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.lt3-tags-value {
+  font-family: var(--lt-font);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--lt-graphite);
+  line-height: 1.5;
+}
+
+/* ── Synonyms / Antonyms — 2-column feature cards ──────────────────────────── */
+.lt3-meta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.lt3-syn-block,
+.lt3-ant-block {
+  border-radius: var(--lt-radius-card);
+  padding: 16px;
+  text-align: left;
+}
+
+.lt3-syn-block {
+  background: var(--lt-forest-green);
+}
+
+.lt3-ant-block {
+  background: var(--lt-currant);
+}
+
+.lt3-meta-label {
+  font-family: var(--lt-font);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--lt-white);
+  opacity: 0.65;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.lt3-meta-value {
+  font-family: var(--lt-font);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--lt-white);
+  line-height: 1.5;
+  display: block;
+}
+
+/* light variants are unused now (both syn/ant use white text) */
+.lt3-meta-label--light { opacity: 0.65; }
+.lt3-meta-value--light { color: var(--lt-white); }
+
+/* ── Image ──────────────────────────────────────────────────────────────────── */
+.lt3-image {
+  margin: 14px auto;
+  max-width: 360px;
+  border-radius: var(--lt-radius-card);
+  overflow: hidden;
+}
+
+.lt3-image img {
+  max-width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Search links ────────────────────────────────────────────────────────────── */
+.lt3-search-links {
+  font-family: var(--lt-font);
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 14px;
+  border-top: 1px solid var(--lt-lunar-dust);
+}
+
+.lt3-search-links a {
+  color: var(--lt-hydrangea);
+  text-decoration: none;
+}
+
+.lt3-search-links a:hover {
+  text-decoration: underline;
+}
+
+.lt3-search-links .sep {
+  color: var(--lt-whisper);
+  margin: 0 6px;
+}
+
+/* ── Night mode ──────────────────────────────────────────────────────────────── */
+.night_mode .card {
+  background: #1a1c22;
+  color: #e8efd6;
+}
+
+.night_mode .lt3-word {
+  color: #5b8ef5;
+}
+
+.night_mode .lt3-ipa {
+  color: #888d84;
+}
+
+.night_mode .lt3-pos {
+  background: #9fb819;
+  color: var(--lt-graphite);
+}
+
+.night_mode .lt3-divider {
+  border-top-color: #2a2d35;
+}
+
+.night_mode .lt3-sentence-block {
+  background: #1a3a12;
+}
+
+.night_mode .lt3-examples-block {
+  background: #252d1c;
+}
+
+.night_mode .lt3-examples-text {
+  color: #c8d8a0;
+}
+
+.night_mode .lt3-definition {
+  color: #e8efd6;
+}
+
+.night_mode .lt3-quote {
+  background: #1e2128;
+  color: #888d84;
+  border-left-color: #5b8ef5;
+}
+
+.night_mode .lt3-tags-block {
+  background: #3a1f3a;
+}
+
+.night_mode .lt3-tags-value {
+  color: #e9c0e9;
+}
+
+.night_mode .lt3-search-links {
+  border-top-color: #2a2d35;
+}
+
+.night_mode .lt3-search-links a {
+  color: #5b8ef5;
+}
+
+/* ── Audio replay button ─────────────────────────────────────────────────────── */
+.replay-button svg {
+  width: 22px;
+  height: 22px;
+}
+
+.replay-button svg circle {
+  fill: var(--lt-hydrangea);
+}
+
+.replay-button svg path {
+  stroke: var(--lt-white);
+  fill: var(--lt-white);
+}
+
+.night_mode .replay-button svg circle {
+  fill: #5b8ef5;
+}
+
+.night_mode .replay-button svg path {
+  stroke: #1a1c22;
+  fill: #1a1c22;
+}

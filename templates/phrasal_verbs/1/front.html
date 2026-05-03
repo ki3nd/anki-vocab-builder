@@ -1,0 +1,50 @@
+<div class="card-front">
+
+  <div class="v2-word-wrap">
+    <span class="v2-word">{{PhrasalVerb}}</span>
+  </div>
+
+  {{#IPA}}<div class="v2-ipa">{{IPA}}</div>{{/IPA}}
+
+  {{#AudioAmerican}}{{#AudioBritish}}
+  <div class="v2-audio-row">
+    <div class="v2-audio-item"><span class="v2-audio-flag">🇺🇸</span>{{AudioAmerican}}</div>
+    <div class="v2-audio-item"><span class="v2-audio-flag">🇬🇧</span>{{AudioBritish}}</div>
+  </div>
+  {{/AudioBritish}}{{/AudioAmerican}}
+  {{#AudioAmerican}}{{^AudioBritish}}
+  <div class="v2-audio-row">
+    <div class="v2-audio-item"><span class="v2-audio-flag">🇺🇸</span>{{AudioAmerican}}</div>
+  </div>
+  {{/AudioBritish}}{{/AudioAmerican}}
+  {{^AudioAmerican}}{{#AudioBritish}}
+  <div class="v2-audio-row">
+    <div class="v2-audio-item"><span class="v2-audio-flag">🇬🇧</span>{{AudioBritish}}</div>
+  </div>
+  {{/AudioBritish}}{{/AudioAmerican}}
+
+  <hr class="v2-divider">
+
+  {{#Sentence}}
+  <div class="v2-sentence-block">
+    <div class="v2-sentence-header">
+      <span class="v2-section-label">Example</span>
+      {{#SentenceAudio}}<span class="v2-sent-audio">{{SentenceAudio}}</span>{{/SentenceAudio}}
+    </div>
+    <div class="v2-sentence-text">{{Sentence}}</div>
+  </div>
+  {{/Sentence}}
+
+  {{#Image}}<div class="v2-image">{{Image}}</div>{{/Image}}
+
+  <div class="v2-search-links">
+    <a href="https://dict.laban.vn/find?type=1&query={{text:PhrasalVerb}}">Laban</a>
+    <span class="sep">·</span>
+    <a href="https://dictionary.cambridge.org/dictionary/english/{{text:PhrasalVerb}}">Cambridge</a>
+    <span class="sep">·</span>
+    <a href="https://youglish.com/search/{{text:PhrasalVerb}}/all?">YouGlish</a>
+    <span class="sep">·</span>
+    <a href="http://images.google.com/search?tbm=isch&q={{text:PhrasalVerb}}">Images</a>
+  </div>
+
+</div>
