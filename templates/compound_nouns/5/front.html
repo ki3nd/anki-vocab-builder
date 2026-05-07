@@ -1,0 +1,50 @@
+<div class="cu5-front">
+
+  <div class="cu5-word-wrap">
+    <span class="cu5-word">{{CompoundNoun}}</span>
+  </div>
+
+  {{#IPA}}<div class="cu5-ipa">{{IPA}}</div>{{/IPA}}
+
+  {{#AudioAmerican}}{{#AudioBritish}}
+  <div class="cu5-audio-row">
+    <div class="cu5-audio-item"><span class="cu5-audio-flag">🇺🇸</span>{{AudioAmerican}}</div>
+    <div class="cu5-audio-item"><span class="cu5-audio-flag">🇬🇧</span>{{AudioBritish}}</div>
+  </div>
+  {{/AudioBritish}}{{/AudioAmerican}}
+  {{#AudioAmerican}}{{^AudioBritish}}
+  <div class="cu5-audio-row">
+    <div class="cu5-audio-item"><span class="cu5-audio-flag">🇺🇸</span>{{AudioAmerican}}</div>
+  </div>
+  {{/AudioBritish}}{{/AudioAmerican}}
+  {{^AudioAmerican}}{{#AudioBritish}}
+  <div class="cu5-audio-row">
+    <div class="cu5-audio-item"><span class="cu5-audio-flag">🇬🇧</span>{{AudioBritish}}</div>
+  </div>
+  {{/AudioBritish}}{{/AudioAmerican}}
+
+  <hr class="cu5-divider">
+
+  {{#Sentence}}
+  <div class="cu5-sentence-block">
+    <div class="cu5-sentence-header">
+      <span class="cu5-section-label">example</span>
+      {{#SentenceAudio}}<span class="cu5-sent-audio">{{SentenceAudio}}</span>{{/SentenceAudio}}
+    </div>
+    <div class="cu5-sentence-text">{{Sentence}}</div>
+  </div>
+  {{/Sentence}}
+
+  {{#Image}}<div class="cu5-image">{{Image}}</div>{{/Image}}
+
+  <div class="cu5-search-links">
+    <a href="https://dict.laban.vn/find?type=1&query={{text:CompoundNoun}}">Laban</a>
+    <span class="cu5-sep">·</span>
+    <a href="https://dictionary.cambridge.org/dictionary/english/{{text:CompoundNoun}}">Cambridge</a>
+    <span class="cu5-sep">·</span>
+    <a href="https://youglish.com/search/{{text:CompoundNoun}}/all?">YouGlish</a>
+    <span class="cu5-sep">·</span>
+    <a href="http://images.google.com/search?tbm=isch&q={{text:CompoundNoun}}">Images</a>
+  </div>
+
+</div>

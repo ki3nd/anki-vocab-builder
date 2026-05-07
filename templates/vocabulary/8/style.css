@@ -1,0 +1,360 @@
+/* ── Lpalo Design System — Vocabulary Template 8 ─────────────────────────── */
+/* "Blush Playground" — Canvas Pink, Alfa Slab One display, Manrope body,    */
+/* playful accent palette as block fills, bold outlines, no shadows           */
+
+:root {
+  --lp-canvas:    #f6e0db;
+  --lp-white:     #ffffff;
+  --lp-black:     #000000;
+  --lp-pumpkin:   #ef724f;
+  --lp-lemon:     #e7db4c;
+  --lp-bubblegum: #981082;
+  --lp-green:     #6ed311;
+  --lp-seafoam:   #ace2df;
+  --lp-lavender:  #e69dff;
+  --lp-sky:       #84bfff;
+  --lp-deep-blue: #5196ff;
+
+  --lp-font-display: 'Alfa Slab One', 'Bebas Neue', ui-sans-serif, system-ui, sans-serif;
+  --lp-font-ui:      'Manrope', 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  --lp-radius-card:   10px;
+  --lp-radius-accent: 40px;
+  --lp-radius-pill:   47px;
+}
+
+/* ── Base ──────────────────────────────────────────────────────────────────── */
+.card {
+  font-family: var(--lp-font-ui);
+  font-size: 15px;
+  line-height: 1.5;
+  background: var(--lp-canvas);
+  color: var(--lp-black);
+  padding: 24px 20px 20px;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Word — Alfa Slab One 400, 46px ────────────────────────────────────────── */
+.lp8-word-wrap {
+  text-align: center;
+  margin: 0 0 6px;
+}
+
+.lp8-word {
+  font-family: var(--lp-font-display);
+  font-size: 46px;
+  font-weight: 400;
+  color: var(--lp-black);
+  line-height: 1.09;
+  letter-spacing: normal;
+}
+
+/* ── IPA ────────────────────────────────────────────────────────────────────── */
+.lp8-ipa {
+  font-family: var(--lp-font-ui);
+  font-size: 14px;
+  font-weight: 400;
+  color: #6b5e5a;
+  text-align: center;
+  margin: 0 0 10px;
+}
+
+/* ── Audio row ──────────────────────────────────────────────────────────────── */
+.lp8-audio-row {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  margin: 6px 0;
+}
+
+.lp8-audio-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 20px;
+}
+
+.lp8-audio-flag {
+  font-size: 15px;
+  line-height: 1;
+}
+
+/* ── POS badge — Pumpkin Accent fill, charcoal outline, 47px pill ────────────── */
+.lp8-pos-row {
+  text-align: center;
+  margin: 12px 0 4px;
+}
+
+.lp8-pos {
+  display: inline-block;
+  font-family: var(--lp-font-ui);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--lp-black);
+  background: var(--lp-pumpkin);
+  border-radius: var(--lp-radius-pill);
+  border: 2px solid var(--lp-black);
+  padding: 4px 16px;
+}
+
+/* ── Divider ────────────────────────────────────────────────────────────────── */
+.lp8-divider {
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  margin: 16px 0;
+}
+
+/* ── Sentence block — white card, charcoal outline, 10px radius ─────────────── */
+.lp8-sentence-block {
+  background: var(--lp-white);
+  border-radius: var(--lp-radius-card);
+  border: 1.5px solid var(--lp-black);
+  padding: 16px 18px;
+  margin: 4px 0 0;
+}
+
+.lp8-sentence-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.lp8-sentence-text {
+  font-family: var(--lp-font-ui);
+  font-size: 14px;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--lp-black);
+  line-height: 1.6;
+}
+
+.lp8-sent-audio {
+  font-size: 20px;
+  line-height: 1;
+}
+
+/* ── Section label — Manrope 700, uppercase ─────────────────────────────────── */
+.lp8-section-label {
+  font-family: var(--lp-font-ui);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--lp-black);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ── Definition — Manrope 700, 17px ────────────────────────────────────────── */
+.lp8-definition {
+  font-family: var(--lp-font-ui);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--lp-black);
+  line-height: 1.4;
+  text-align: left;
+  margin: 4px 0;
+}
+
+/* ── Examples block — Sky Blue accent card, 40px radius, charcoal outline ────── */
+.lp8-examples-block {
+  background: var(--lp-sky);
+  border-radius: var(--lp-radius-accent);
+  border: 1.5px solid var(--lp-black);
+  padding: 15px 20px;
+  margin: 4px 0 0;
+}
+
+.lp8-examples-text {
+  font-family: var(--lp-font-ui);
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--lp-black);
+  line-height: 2;
+  text-align: left;
+  margin-top: 8px;
+}
+
+/* ── Quote — Pumpkin Accent left border, white card ────────────────────────── */
+.lp8-quote {
+  font-family: var(--lp-font-ui);
+  font-size: 13px;
+  font-style: italic;
+  color: var(--lp-black);
+  border-left: 3px solid var(--lp-pumpkin);
+  background: var(--lp-white);
+  border-radius: 0 var(--lp-radius-card) var(--lp-radius-card) 0;
+  padding: 10px 14px;
+  margin: 12px 0;
+  line-height: 1.5;
+}
+
+/* ── Tags — Lemon Highlight pill, charcoal outline ──────────────────────────── */
+.lp8-tags-block {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 12px 0 0;
+  background: var(--lp-lemon);
+  border-radius: var(--lp-radius-pill);
+  border: 1.5px solid var(--lp-black);
+  padding: 6px 16px;
+}
+
+.lp8-tags-value {
+  font-family: var(--lp-font-ui);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--lp-black);
+}
+
+/* ── Syn/Ant grid — Seafoam + Lavender accent cards, 40px radius ─────────────── */
+.lp8-meta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.lp8-syn-block,
+.lp8-ant-block {
+  border-radius: var(--lp-radius-accent);
+  border: 1.5px solid var(--lp-black);
+  padding: 14px 16px;
+  text-align: left;
+}
+
+.lp8-syn-block { background: var(--lp-seafoam); }
+.lp8-ant-block { background: var(--lp-lavender); }
+
+.lp8-meta-label {
+  font-family: var(--lp-font-ui);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--lp-black);
+  display: block;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.lp8-meta-value {
+  font-family: var(--lp-font-ui);
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--lp-black);
+  line-height: 1.5;
+  display: block;
+}
+
+/* ── Image ──────────────────────────────────────────────────────────────────── */
+.lp8-image {
+  margin: 14px auto;
+  max-width: 360px;
+  border-radius: var(--lp-radius-card);
+  border: 1.5px solid var(--lp-black);
+  overflow: hidden;
+}
+
+.lp8-image img {
+  max-width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Search links — Deep Blue ───────────────────────────────────────────────── */
+.lp8-search-links {
+  font-family: var(--lp-font-ui);
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.lp8-search-links a {
+  color: var(--lp-deep-blue);
+  text-decoration: none;
+}
+
+.lp8-search-links a:hover { text-decoration: underline; }
+
+.lp8-sep {
+  color: rgba(0, 0, 0, 0.25);
+  margin: 0 6px;
+}
+
+/* ── Night mode ──────────────────────────────────────────────────────────────── */
+.night_mode .card {
+  background: #1a1214;
+  color: #f5ede8;
+}
+
+.night_mode .lp8-word { color: #f5ede8; }
+.night_mode .lp8-ipa  { color: #9a9090; }
+
+.night_mode .lp8-pos {
+  background: #c05a38;
+  border-color: #f5ede8;
+  color: #f5ede8;
+}
+
+.night_mode .lp8-divider { border-top-color: rgba(255, 255, 255, 0.12); }
+
+.night_mode .lp8-sentence-block {
+  background: #2a1e1a;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.night_mode .lp8-sentence-text { color: #e8dcd8; }
+
+.night_mode .lp8-definition { color: #f5ede8; }
+
+.night_mode .lp8-examples-block {
+  background: #1a3040;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.night_mode .lp8-examples-text { color: #b8d8ee; }
+
+.night_mode .lp8-quote {
+  background: #2a1e1a;
+  color: #d0c4c0;
+  border-left-color: #c05a38;
+}
+
+.night_mode .lp8-tags-block {
+  background: #4a4210;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.night_mode .lp8-tags-value  { color: #ede890; }
+
+.night_mode .lp8-syn-block {
+  background: #0e2c2a;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.night_mode .lp8-ant-block {
+  background: #2a1638;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.night_mode .lp8-meta-label { color: #a0a0a0; }
+.night_mode .lp8-meta-value { color: #d8cce0; }
+
+.night_mode .lp8-search-links  { border-top-color: rgba(255, 255, 255, 0.12); }
+.night_mode .lp8-search-links a { color: #84bfff; }
+.night_mode .lp8-sep            { color: rgba(255, 255, 255, 0.2); }
+
+/* ── Audio replay button — Pumpkin Accent fill ───────────────────────────────── */
+.replay-button svg { width: 22px; height: 22px; }
+
+.replay-button svg circle { fill: var(--lp-pumpkin); }
+.replay-button svg path   { stroke: var(--lp-white); fill: var(--lp-white); }
+
+.night_mode .replay-button svg circle { fill: #c05a38; }
+.night_mode .replay-button svg path   { stroke: #1a1214; fill: #1a1214; }

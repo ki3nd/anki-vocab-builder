@@ -1,0 +1,54 @@
+<div class="ap4-front">
+
+  <div class="ap4-word-wrap">
+    <span class="ap4-word">{{Word}}</span>
+  </div>
+
+  {{#IPA}}<div class="ap4-ipa">{{IPA}}</div>{{/IPA}}
+
+  {{#AudioAmerican}}{{#AudioBritish}}
+  <div class="ap4-audio-row">
+    <div class="ap4-audio-item"><span class="ap4-audio-flag">🇺🇸</span>{{AudioAmerican}}</div>
+    <div class="ap4-audio-item"><span class="ap4-audio-flag">🇬🇧</span>{{AudioBritish}}</div>
+  </div>
+  {{/AudioBritish}}{{/AudioAmerican}}
+  {{#AudioAmerican}}{{^AudioBritish}}
+  <div class="ap4-audio-row">
+    <div class="ap4-audio-item"><span class="ap4-audio-flag">🇺🇸</span>{{AudioAmerican}}</div>
+  </div>
+  {{/AudioBritish}}{{/AudioAmerican}}
+  {{^AudioAmerican}}{{#AudioBritish}}
+  <div class="ap4-audio-row">
+    <div class="ap4-audio-item"><span class="ap4-audio-flag">🇬🇧</span>{{AudioBritish}}</div>
+  </div>
+  {{/AudioBritish}}{{/AudioAmerican}}
+
+  {{#PartOfSpeech}}
+  <div class="ap4-pos-row"><span class="ap4-pos">{{PartOfSpeech}}</span></div>
+  {{/PartOfSpeech}}
+
+  <hr class="ap4-divider">
+
+  {{#Sentence}}
+  <div class="ap4-sentence-block">
+    <div class="ap4-sentence-header">
+      <span class="ap4-section-label">Example</span>
+      {{#SentenceAudio}}<span class="ap4-sent-audio">{{SentenceAudio}}</span>{{/SentenceAudio}}
+    </div>
+    <div class="ap4-sentence-text">{{Sentence}}</div>
+  </div>
+  {{/Sentence}}
+
+  {{#Image}}<div class="ap4-image">{{Image}}</div>{{/Image}}
+
+  <div class="ap4-search-links">
+    <a href="https://dict.laban.vn/find?type=1&query={{text:Word}}">Laban</a>
+    <span class="ap4-sep">·</span>
+    <a href="https://dictionary.cambridge.org/dictionary/english/{{text:Word}}">Cambridge</a>
+    <span class="ap4-sep">·</span>
+    <a href="https://youglish.com/search/{{text:Word}}/all?">YouGlish</a>
+    <span class="ap4-sep">·</span>
+    <a href="http://images.google.com/search?tbm=isch&q={{text:Word}}">Images</a>
+  </div>
+
+</div>

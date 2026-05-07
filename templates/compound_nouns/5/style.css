@@ -1,0 +1,398 @@
+/* ── Cursor Design System — Vocabulary Template 5 ────────────────────────── */
+
+:root {
+  --cu-parchment:    #f7f7f4;
+  --cu-inkwell:      #262510;
+  --cu-stone:        #7a7974;
+  --cu-pebble:       #e6e5e0;
+  --cu-beige:        #cdcdc9;
+  --cu-orange:       #f54e00;
+  --cu-green:        #4ade80;
+  --cu-goldenrod:    #c08532;
+
+  --cu-font-gothic:  'CursorGothic', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --cu-font-mono:    'berkeleyMono', 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --cu-font-lato:    'Lato', ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  --cu-shadow-xl:    rgba(0, 0, 0, 0.14) 0px 28px 70px 0px,
+                     rgba(0, 0, 0, 0.1) 0px 14px 32px 0px,
+                     oklab(0.263084 -0.00230259 0.0124794 / 0.1) 0px 0px 0px 1px;
+  --cu-shadow-subtle: oklab(0.263084 -0.00230259 0.0124794 / 0.1) 0px 0px 0px 1px,
+                      rgba(0, 0, 0, 0.28) 0px 18px 36px -18px;
+
+  --cu-radius:   4px;
+  --cu-radius-lg: 8px;
+}
+
+/* ── Base ──────────────────────────────────────────────────────────────────── */
+.card {
+  font-family: var(--cu-font-lato);
+  font-size: 14px;
+  line-height: 1.43;
+  background: var(--cu-parchment);
+  color: var(--cu-inkwell);
+  padding: 22px 18px 18px;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Word — CursorGothic, heading-lg scale, tight tracking ──────────────────── */
+.cu5-word-wrap {
+  text-align: center;
+  margin: 0 0 6px;
+}
+
+.cu5-word {
+  font-family: var(--cu-font-gothic);
+  font-size: 48px;
+  font-weight: 400;
+  color: var(--cu-inkwell);
+  line-height: 1.1;
+  letter-spacing: -0.45px;
+  font-feature-settings: "ss09", "ss08", "tnum";
+}
+
+/* ── IPA — berkeleyMono, warm gray ─────────────────────────────────────────── */
+.cu5-ipa {
+  font-family: var(--cu-font-mono);
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--cu-stone);
+  text-align: center;
+  letter-spacing: 0.06px;
+  margin: 0 0 10px;
+}
+
+/* ── Audio row ──────────────────────────────────────────────────────────────── */
+.cu5-audio-row {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  margin: 5px 0;
+}
+
+.cu5-audio-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 20px;
+}
+
+.cu5-audio-flag {
+  font-size: 14px;
+  line-height: 1;
+}
+
+/* ── Part of Speech — outlined orange pill, Onyx Outline ────────────────────── */
+.cu5-pos-row {
+  text-align: center;
+  margin: 10px 0 4px;
+}
+
+.cu5-pos {
+  display: inline-block;
+  font-family: var(--cu-font-mono);
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.06px;
+  color: var(--cu-orange);
+  background: transparent;
+  border: 1px solid var(--cu-orange);
+  border-radius: var(--cu-radius);
+  padding: 3px 10px;
+}
+
+/* ── Divider — Muted Stone hairline ─────────────────────────────────────────── */
+.cu5-divider {
+  border: none;
+  border-top: 1px solid var(--cu-beige);
+  margin: 14px 0;
+}
+
+/* ── Sentence block — Pebble Gray elevated card ────────────────────────────── */
+.cu5-sentence-block {
+  background: var(--cu-pebble);
+  border-radius: var(--cu-radius-lg);
+  box-shadow: var(--cu-shadow-subtle);
+  padding: 14px 16px;
+  margin: 4px 0 0;
+}
+
+.cu5-sentence-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.cu5-sentence-text {
+  font-family: var(--cu-font-mono);
+  font-size: 13px;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--cu-inkwell);
+  line-height: 1.63;
+}
+
+.cu5-sent-audio {
+  font-size: 20px;
+  line-height: 1;
+}
+
+/* ── Section label — berkeleyMono lowercase, Muted Stone ────────────────────── */
+.cu5-section-label {
+  font-family: var(--cu-font-mono);
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.06px;
+  color: var(--cu-stone);
+}
+
+/* ── Definition — CursorGothic body size ────────────────────────────────────── */
+.cu5-definition {
+  font-family: var(--cu-font-gothic);
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--cu-inkwell);
+  line-height: 1.43;
+  letter-spacing: -0.08px;
+  font-feature-settings: "ss09", "ss08";
+  text-align: left;
+  margin: 4px 0;
+}
+
+/* ── Examples block — Highlight Beige nested card ───────────────────────────── */
+.cu5-examples-block {
+  background: var(--cu-beige);
+  border-radius: var(--cu-radius);
+  padding: 12px 14px;
+  margin: 4px 0 0;
+}
+
+.cu5-examples-text {
+  font-family: var(--cu-font-mono);
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--cu-inkwell);
+  line-height: 1.67;
+  text-align: left;
+  margin-top: 8px;
+}
+
+/* ── Quote — Onyx Outline left border ──────────────────────────────────────── */
+.cu5-quote {
+  font-family: var(--cu-font-lato);
+  font-size: 13px;
+  font-style: italic;
+  color: var(--cu-stone);
+  border-left: 2px solid var(--cu-orange);
+  padding: 8px 12px;
+  margin: 12px 0;
+  line-height: 1.5;
+  background: var(--cu-parchment);
+}
+
+/* ── Tags block — berkeleyMono pill ─────────────────────────────────────────── */
+.cu5-tags-block {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 10px 0 0;
+  padding: 8px 12px;
+  background: var(--cu-pebble);
+  border-radius: var(--cu-radius);
+}
+
+.cu5-tags-value {
+  font-family: var(--cu-font-mono);
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--cu-stone);
+  letter-spacing: 0.06px;
+}
+
+/* ── Synonyms / Antonyms — Pebble Gray cards with shadow ────────────────────── */
+.cu5-meta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.cu5-syn-block,
+.cu5-ant-block {
+  background: var(--cu-pebble);
+  border-radius: var(--cu-radius-lg);
+  box-shadow: var(--cu-shadow-subtle);
+  padding: 12px 14px;
+  text-align: left;
+}
+
+.cu5-meta-label {
+  font-family: var(--cu-font-mono);
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.06px;
+  color: var(--cu-stone);
+  display: block;
+  margin-bottom: 5px;
+}
+
+.cu5-meta-value {
+  font-family: var(--cu-font-lato);
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--cu-inkwell);
+  line-height: 1.5;
+  display: block;
+}
+
+/* ── Image ──────────────────────────────────────────────────────────────────── */
+.cu5-image {
+  margin: 12px auto;
+  max-width: 360px;
+  border-radius: var(--cu-radius-lg);
+  overflow: hidden;
+}
+
+.cu5-image img {
+  max-width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Search links ─────────────────────────────────────────────────────────── */
+.cu5-search-links {
+  font-family: var(--cu-font-mono);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.06px;
+  text-align: center;
+  margin-top: 18px;
+  padding-top: 12px;
+  border-top: 1px solid var(--cu-beige);
+}
+
+.cu5-search-links a {
+  color: var(--cu-orange);
+  text-decoration: none;
+}
+
+.cu5-search-links a:hover {
+  text-decoration: underline;
+}
+
+.cu5-sep {
+  color: var(--cu-beige);
+  margin: 0 6px;
+}
+
+/* ── Night mode ──────────────────────────────────────────────────────────────── */
+.night_mode .card {
+  background: #1c1c19;
+  color: #e8e6e0;
+}
+
+.night_mode .cu5-word {
+  color: #e8e6e0;
+}
+
+.night_mode .cu5-ipa {
+  color: #7a7870;
+}
+
+.night_mode .cu5-pos {
+  color: #f54e00;
+  border-color: #f54e00;
+}
+
+.night_mode .cu5-divider {
+  border-top-color: #2e2e2a;
+}
+
+.night_mode .cu5-sentence-block {
+  background: #2a2a26;
+  box-shadow: none;
+}
+
+.night_mode .cu5-sentence-text {
+  color: #e8e6e0;
+}
+
+.night_mode .cu5-definition {
+  color: #e8e6e0;
+}
+
+.night_mode .cu5-examples-block {
+  background: #222220;
+}
+
+.night_mode .cu5-examples-text {
+  color: #c8c6c0;
+}
+
+.night_mode .cu5-quote {
+  background: #1c1c19;
+  color: #7a7870;
+  border-left-color: #f54e00;
+}
+
+.night_mode .cu5-tags-block {
+  background: #2a2a26;
+}
+
+.night_mode .cu5-tags-value {
+  color: #7a7870;
+}
+
+.night_mode .cu5-syn-block,
+.night_mode .cu5-ant-block {
+  background: #2a2a26;
+  box-shadow: none;
+}
+
+.night_mode .cu5-meta-label {
+  color: #7a7870;
+}
+
+.night_mode .cu5-meta-value {
+  color: #c8c6c0;
+}
+
+.night_mode .cu5-search-links {
+  border-top-color: #2e2e2a;
+}
+
+.night_mode .cu5-search-links a {
+  color: #f54e00;
+}
+
+.night_mode .cu5-sep {
+  color: #2e2e2a;
+}
+
+/* ── Audio replay button — Onyx Outline fill ─────────────────────────────── */
+.replay-button svg {
+  width: 20px;
+  height: 20px;
+}
+
+.replay-button svg circle {
+  fill: var(--cu-orange);
+}
+
+.replay-button svg path {
+  stroke: var(--cu-parchment);
+  fill: var(--cu-parchment);
+}
+
+.night_mode .replay-button svg circle {
+  fill: #f54e00;
+}
+
+.night_mode .replay-button svg path {
+  stroke: #1c1c19;
+  fill: #1c1c19;
+}

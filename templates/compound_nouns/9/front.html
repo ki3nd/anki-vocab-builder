@@ -1,0 +1,50 @@
+<div class="pl9-front">
+
+  <div class="pl9-word-wrap">
+    <span class="pl9-word">{{CompoundNoun}}</span>
+  </div>
+
+  {{#IPA}}<div class="pl9-ipa">{{IPA}}</div>{{/IPA}}
+
+  {{#AudioAmerican}}{{#AudioBritish}}
+  <div class="pl9-audio-row">
+    <div class="pl9-audio-item"><span class="pl9-audio-flag">🇺🇸</span>{{AudioAmerican}}</div>
+    <div class="pl9-audio-item"><span class="pl9-audio-flag">🇬🇧</span>{{AudioBritish}}</div>
+  </div>
+  {{/AudioBritish}}{{/AudioAmerican}}
+  {{#AudioAmerican}}{{^AudioBritish}}
+  <div class="pl9-audio-row">
+    <div class="pl9-audio-item"><span class="pl9-audio-flag">🇺🇸</span>{{AudioAmerican}}</div>
+  </div>
+  {{/AudioBritish}}{{/AudioAmerican}}
+  {{^AudioAmerican}}{{#AudioBritish}}
+  <div class="pl9-audio-row">
+    <div class="pl9-audio-item"><span class="pl9-audio-flag">🇬🇧</span>{{AudioBritish}}</div>
+  </div>
+  {{/AudioBritish}}{{/AudioAmerican}}
+
+  <hr class="pl9-divider">
+
+  {{#Sentence}}
+  <div class="pl9-sentence-block">
+    <div class="pl9-sentence-header">
+      <span class="pl9-section-label">Example</span>
+      {{#SentenceAudio}}<span class="pl9-sent-audio">{{SentenceAudio}}</span>{{/SentenceAudio}}
+    </div>
+    <div class="pl9-sentence-text">{{Sentence}}</div>
+  </div>
+  {{/Sentence}}
+
+  {{#Image}}<div class="pl9-image">{{Image}}</div>{{/Image}}
+
+  <div class="pl9-search-links">
+    <a href="https://dict.laban.vn/find?type=1&query={{text:CompoundNoun}}">Laban</a>
+    <span class="pl9-sep">·</span>
+    <a href="https://dictionary.cambridge.org/dictionary/english/{{text:CompoundNoun}}">Cambridge</a>
+    <span class="pl9-sep">·</span>
+    <a href="https://youglish.com/search/{{text:CompoundNoun}}/all?">YouGlish</a>
+    <span class="pl9-sep">·</span>
+    <a href="http://images.google.com/search?tbm=isch&q={{text:CompoundNoun}}">Images</a>
+  </div>
+
+</div>

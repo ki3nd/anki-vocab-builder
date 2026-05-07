@@ -1,0 +1,88 @@
+<div class="lp8-back">
+
+  <div class="lp8-word-wrap">
+    <span class="lp8-word">{{PhrasalVerb}}</span>
+  </div>
+
+  {{#IPA}}<div class="lp8-ipa">{{IPA}}</div>{{/IPA}}
+
+  {{#AudioAmerican}}{{#AudioBritish}}
+  <div class="lp8-audio-row">
+    <div class="lp8-audio-item"><span class="lp8-audio-flag">🇺🇸</span>{{AudioAmerican}}</div>
+    <div class="lp8-audio-item"><span class="lp8-audio-flag">🇬🇧</span>{{AudioBritish}}</div>
+  </div>
+  {{/AudioBritish}}{{/AudioAmerican}}
+  {{#AudioAmerican}}{{^AudioBritish}}
+  <div class="lp8-audio-row">
+    <div class="lp8-audio-item"><span class="lp8-audio-flag">🇺🇸</span>{{AudioAmerican}}</div>
+  </div>
+  {{/AudioBritish}}{{/AudioAmerican}}
+  {{^AudioAmerican}}{{#AudioBritish}}
+  <div class="lp8-audio-row">
+    <div class="lp8-audio-item"><span class="lp8-audio-flag">🇬🇧</span>{{AudioBritish}}</div>
+  </div>
+  {{/AudioBritish}}{{/AudioAmerican}}
+
+  <hr class="lp8-divider">
+
+  {{#Definition}}
+  <div class="lp8-definition">{{Definition}}</div>
+  <hr class="lp8-divider">
+  {{/Definition}}
+
+  {{#Examples}}
+  <div class="lp8-examples-block">
+    <span class="lp8-section-label">Examples</span>
+    <div class="lp8-examples-text">{{Examples}}</div>
+  </div>
+  {{/Examples}}
+
+  {{#Quote}}
+  <div class="lp8-quote">{{Quote}}</div>
+  {{/Quote}}
+
+  {{#Tags}}
+  <div class="lp8-tags-block">
+    <span class="lp8-section-label">Tags</span>
+    <span class="lp8-tags-value">{{Tags}}</span>
+  </div>
+  {{/Tags}}
+
+  {{#Synonyms}}{{#Antonyms}}
+  <div class="lp8-meta-grid">
+    <div class="lp8-syn-block">
+      <span class="lp8-meta-label">Synonyms</span>
+      <span class="lp8-meta-value">{{Synonyms}}</span>
+    </div>
+    <div class="lp8-ant-block">
+      <span class="lp8-meta-label">Antonyms</span>
+      <span class="lp8-meta-value">{{Antonyms}}</span>
+    </div>
+  </div>
+  {{/Antonyms}}{{/Synonyms}}
+  {{#Synonyms}}{{^Antonyms}}
+  <div class="lp8-syn-block" style="margin-top:10px;">
+    <span class="lp8-meta-label">Synonyms</span>
+    <span class="lp8-meta-value">{{Synonyms}}</span>
+  </div>
+  {{/Antonyms}}{{/Synonyms}}
+  {{^Synonyms}}{{#Antonyms}}
+  <div class="lp8-ant-block" style="margin-top:10px;">
+    <span class="lp8-meta-label">Antonyms</span>
+    <span class="lp8-meta-value">{{Antonyms}}</span>
+  </div>
+  {{/Antonyms}}{{/Synonyms}}
+
+  {{#Image}}<div class="lp8-image">{{Image}}</div>{{/Image}}
+
+  <div class="lp8-search-links">
+    <a href="https://dict.laban.vn/find?type=1&query={{text:PhrasalVerb}}">Laban</a>
+    <span class="lp8-sep">·</span>
+    <a href="https://dictionary.cambridge.org/dictionary/english/{{text:PhrasalVerb}}">Cambridge</a>
+    <span class="lp8-sep">·</span>
+    <a href="https://youglish.com/search/{{text:PhrasalVerb}}/all?">YouGlish</a>
+    <span class="lp8-sep">·</span>
+    <a href="http://images.google.com/search?tbm=isch&q={{text:PhrasalVerb}}">Images</a>
+  </div>
+
+</div>

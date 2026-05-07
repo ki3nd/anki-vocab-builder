@@ -1,0 +1,88 @@
+<div class="cy7-back">
+
+  <div class="cy7-word-wrap">
+    <span class="cy7-word">{{CompoundNoun}}</span>
+  </div>
+
+  {{#IPA}}<div class="cy7-ipa">{{IPA}}</div>{{/IPA}}
+
+  {{#AudioAmerican}}{{#AudioBritish}}
+  <div class="cy7-audio-row">
+    <div class="cy7-audio-item"><span class="cy7-audio-flag">🇺🇸</span>{{AudioAmerican}}</div>
+    <div class="cy7-audio-item"><span class="cy7-audio-flag">🇬🇧</span>{{AudioBritish}}</div>
+  </div>
+  {{/AudioBritish}}{{/AudioAmerican}}
+  {{#AudioAmerican}}{{^AudioBritish}}
+  <div class="cy7-audio-row">
+    <div class="cy7-audio-item"><span class="cy7-audio-flag">🇺🇸</span>{{AudioAmerican}}</div>
+  </div>
+  {{/AudioBritish}}{{/AudioAmerican}}
+  {{^AudioAmerican}}{{#AudioBritish}}
+  <div class="cy7-audio-row">
+    <div class="cy7-audio-item"><span class="cy7-audio-flag">🇬🇧</span>{{AudioBritish}}</div>
+  </div>
+  {{/AudioBritish}}{{/AudioAmerican}}
+
+  <hr class="cy7-divider">
+
+  {{#Definition}}
+  <div class="cy7-definition">{{Definition}}</div>
+  <hr class="cy7-divider">
+  {{/Definition}}
+
+  {{#Examples}}
+  <div class="cy7-examples-block">
+    <span class="cy7-section-label">Examples</span>
+    <div class="cy7-examples-text">{{Examples}}</div>
+  </div>
+  {{/Examples}}
+
+  {{#Quote}}
+  <div class="cy7-quote">{{Quote}}</div>
+  {{/Quote}}
+
+  {{#Tags}}
+  <div class="cy7-tags-block">
+    <span class="cy7-section-label">Tags</span>
+    <span class="cy7-tags-value">{{Tags}}</span>
+  </div>
+  {{/Tags}}
+
+  {{#Synonyms}}{{#Antonyms}}
+  <div class="cy7-meta-grid">
+    <div class="cy7-syn-block">
+      <span class="cy7-meta-label">Synonyms</span>
+      <span class="cy7-meta-value cy7-meta-value--blue">{{Synonyms}}</span>
+    </div>
+    <div class="cy7-ant-block">
+      <span class="cy7-meta-label cy7-meta-label--amber">Antonyms</span>
+      <span class="cy7-meta-value cy7-meta-value--amber">{{Antonyms}}</span>
+    </div>
+  </div>
+  {{/Antonyms}}{{/Synonyms}}
+  {{#Synonyms}}{{^Antonyms}}
+  <div class="cy7-syn-block" style="margin-top:10px;">
+    <span class="cy7-meta-label">Synonyms</span>
+    <span class="cy7-meta-value cy7-meta-value--blue">{{Synonyms}}</span>
+  </div>
+  {{/Antonyms}}{{/Synonyms}}
+  {{^Synonyms}}{{#Antonyms}}
+  <div class="cy7-ant-block" style="margin-top:10px;">
+    <span class="cy7-meta-label cy7-meta-label--amber">Antonyms</span>
+    <span class="cy7-meta-value cy7-meta-value--amber">{{Antonyms}}</span>
+  </div>
+  {{/Antonyms}}{{/Synonyms}}
+
+  {{#Image}}<div class="cy7-image">{{Image}}</div>{{/Image}}
+
+  <div class="cy7-search-links">
+    <a href="https://dict.laban.vn/find?type=1&query={{text:CompoundNoun}}">Laban</a>
+    <span class="cy7-sep">·</span>
+    <a href="https://dictionary.cambridge.org/dictionary/english/{{text:CompoundNoun}}">Cambridge</a>
+    <span class="cy7-sep">·</span>
+    <a href="https://youglish.com/search/{{text:CompoundNoun}}/all?">YouGlish</a>
+    <span class="cy7-sep">·</span>
+    <a href="http://images.google.com/search?tbm=isch&q={{text:CompoundNoun}}">Images</a>
+  </div>
+
+</div>

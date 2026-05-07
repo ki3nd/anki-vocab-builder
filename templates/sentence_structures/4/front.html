@@ -1,0 +1,25 @@
+<div class="ap4-front">
+
+  <div class="ap4-word-wrap">
+    <span class="ap4-word">{{Structure}}</span>
+  </div>
+
+  {{#Tags}}
+  <div class="ap4-pos-row"><span class="ap4-pos">{{Tags}}</span></div>
+  {{/Tags}}
+
+  <hr class="ap4-divider">
+
+  {{#Sentence}}
+  <div class="ap4-sentence-block">
+    <div class="ap4-sentence-header">
+      <span class="ap4-section-label">Example</span>
+      {{#SentenceAudio}}<span class="ap4-sent-audio">{{SentenceAudio}}</span>{{/SentenceAudio}}
+    </div>
+    <div class="ap4-sentence-text">{{Sentence}}</div>
+  </div>
+  {{/Sentence}}
+
+  {{#Image}}<div class="ap4-image">{{Image}}</div>{{/Image}}
+
+</div>

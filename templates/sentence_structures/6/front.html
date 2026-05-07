@@ -1,0 +1,25 @@
+<div class="fm6-front">
+
+  <div class="fm6-word-wrap">
+    <span class="fm6-word">{{Structure}}</span>
+  </div>
+
+  {{#Tags}}
+  <div class="fm6-pos-row"><span class="fm6-pos">{{Tags}}</span></div>
+  {{/Tags}}
+
+  <hr class="fm6-divider">
+
+  {{#Sentence}}
+  <div class="fm6-sentence-block">
+    <div class="fm6-sentence-header">
+      <span class="fm6-section-label">Example</span>
+      {{#SentenceAudio}}<span class="fm6-sent-audio">{{SentenceAudio}}</span>{{/SentenceAudio}}
+    </div>
+    <div class="fm6-sentence-text">{{Sentence}}</div>
+  </div>
+  {{/Sentence}}
+
+  {{#Image}}<div class="fm6-image">{{Image}}</div>{{/Image}}
+
+</div>

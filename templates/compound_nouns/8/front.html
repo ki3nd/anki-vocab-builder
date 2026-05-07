@@ -1,0 +1,50 @@
+<div class="lp8-front">
+
+  <div class="lp8-word-wrap">
+    <span class="lp8-word">{{CompoundNoun}}</span>
+  </div>
+
+  {{#IPA}}<div class="lp8-ipa">{{IPA}}</div>{{/IPA}}
+
+  {{#AudioAmerican}}{{#AudioBritish}}
+  <div class="lp8-audio-row">
+    <div class="lp8-audio-item"><span class="lp8-audio-flag">🇺🇸</span>{{AudioAmerican}}</div>
+    <div class="lp8-audio-item"><span class="lp8-audio-flag">🇬🇧</span>{{AudioBritish}}</div>
+  </div>
+  {{/AudioBritish}}{{/AudioAmerican}}
+  {{#AudioAmerican}}{{^AudioBritish}}
+  <div class="lp8-audio-row">
+    <div class="lp8-audio-item"><span class="lp8-audio-flag">🇺🇸</span>{{AudioAmerican}}</div>
+  </div>
+  {{/AudioBritish}}{{/AudioAmerican}}
+  {{^AudioAmerican}}{{#AudioBritish}}
+  <div class="lp8-audio-row">
+    <div class="lp8-audio-item"><span class="lp8-audio-flag">🇬🇧</span>{{AudioBritish}}</div>
+  </div>
+  {{/AudioBritish}}{{/AudioAmerican}}
+
+  <hr class="lp8-divider">
+
+  {{#Sentence}}
+  <div class="lp8-sentence-block">
+    <div class="lp8-sentence-header">
+      <span class="lp8-section-label">Example</span>
+      {{#SentenceAudio}}<span class="lp8-sent-audio">{{SentenceAudio}}</span>{{/SentenceAudio}}
+    </div>
+    <div class="lp8-sentence-text">{{Sentence}}</div>
+  </div>
+  {{/Sentence}}
+
+  {{#Image}}<div class="lp8-image">{{Image}}</div>{{/Image}}
+
+  <div class="lp8-search-links">
+    <a href="https://dict.laban.vn/find?type=1&query={{text:CompoundNoun}}">Laban</a>
+    <span class="lp8-sep">·</span>
+    <a href="https://dictionary.cambridge.org/dictionary/english/{{text:CompoundNoun}}">Cambridge</a>
+    <span class="lp8-sep">·</span>
+    <a href="https://youglish.com/search/{{text:CompoundNoun}}/all?">YouGlish</a>
+    <span class="lp8-sep">·</span>
+    <a href="http://images.google.com/search?tbm=isch&q={{text:CompoundNoun}}">Images</a>
+  </div>
+
+</div>

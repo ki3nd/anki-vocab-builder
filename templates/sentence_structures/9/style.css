@@ -1,0 +1,262 @@
+/* ── Playful Design System — Sentence Structures Template 9 ──────────────── */
+/* "Gradient Playground" — soft pastel gradient canvas, Inter 900 display,   */
+/* Vivacious Pink sole accent, Deep Graphite feature cards, 44px card radius  */
+
+:root {
+  --pl-canvas:   #f6f2ee;
+  --pl-gradient: linear-gradient(135deg, #f6f2ee 0%, #ffc8c6 35%, #edd8f8 70%, #ddbef8 100%);
+  --pl-ink:      #0f172a;
+  --pl-pink:     #ff2e95;
+  --pl-graphite: #111111;
+  --pl-coal:     #202126;
+  --pl-slate:    #414040;
+  --pl-white:    #ffffff;
+  --pl-pale-ash: #e8e5e0;
+
+  --pl-font: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+             "Segoe UI", sans-serif;
+
+  --pl-shadow-card: rgba(0, 0, 0, 0.18) 0px 8px 32px 0px,
+                    rgba(0, 0, 0, 0.06) 0px 2px 6px 0px;
+
+  --pl-radius-card:  44px;
+  --pl-radius-image: 16px;
+  --pl-radius-tag:   999px;
+}
+
+/* ── Base ──────────────────────────────────────────────────────────────────── */
+.card {
+  font-family: var(--pl-font);
+  font-size: 15px;
+  line-height: 1.5;
+  background: var(--pl-gradient);
+  color: var(--pl-ink);
+  padding: 24px 20px 20px;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100%;
+}
+
+/* ── Structure — Inter 900, reduced for multi-word patterns ──────────────────── */
+.pl9-word-wrap {
+  text-align: center;
+  margin: 0 0 6px;
+}
+
+.pl9-word {
+  font-family: var(--pl-font);
+  font-size: 30px;
+  font-weight: 900;
+  color: var(--pl-ink);
+  line-height: 1.23;
+  letter-spacing: -0.002em;
+}
+
+/* ── Tags pill on front — Vivacious Pink, 999px ─────────────────────────────── */
+.pl9-pos-row {
+  text-align: center;
+  margin: 12px 0 4px;
+}
+
+.pl9-pos {
+  display: inline-block;
+  font-family: var(--pl-font);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: -0.002em;
+  color: var(--pl-white);
+  background: var(--pl-pink);
+  border-radius: var(--pl-radius-tag);
+  padding: 4px 16px;
+  white-space: normal;
+  word-break: break-word;
+}
+
+/* ── Divider ────────────────────────────────────────────────────────────────── */
+.pl9-divider {
+  border: none;
+  border-top: 1px solid rgba(15, 23, 42, 0.12);
+  margin: 16px 0;
+}
+
+/* ── Sentence block — Deep Graphite feature card ────────────────────────────── */
+.pl9-sentence-block {
+  background: var(--pl-graphite);
+  border-radius: var(--pl-radius-card);
+  box-shadow: var(--pl-shadow-card);
+  padding: 20px 22px;
+  margin: 4px 0 0;
+}
+
+.pl9-sentence-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.pl9-sentence-text {
+  font-family: var(--pl-font);
+  font-size: 14px;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--pl-white);
+  line-height: 1.6;
+  letter-spacing: -0.002em;
+}
+
+/* ── Section label ──────────────────────────────────────────────────────────── */
+.pl9-section-label {
+  font-family: var(--pl-font);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.pl9-section-label--dark {
+  color: var(--pl-slate);
+}
+
+/* ── Meaning — Inter 700 ────────────────────────────────────────────────────── */
+.pl9-definition {
+  font-family: var(--pl-font);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--pl-coal);
+  line-height: 1.45;
+  letter-spacing: -0.002em;
+  text-align: left;
+  margin: 4px 0;
+}
+
+/* ── Examples block — white card, shadow ────────────────────────────────────── */
+.pl9-examples-block {
+  background: var(--pl-white);
+  border-radius: var(--pl-radius-card);
+  box-shadow: var(--pl-shadow-card);
+  padding: 18px 20px;
+  margin: 4px 0 0;
+}
+
+.pl9-examples-text {
+  font-family: var(--pl-font);
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--pl-coal);
+  line-height: 2;
+  letter-spacing: -0.002em;
+  text-align: left;
+  margin-top: 8px;
+}
+
+/* ── Equivalent block — white card, pink left border ────────────────────────── */
+.pl9-equivalent-block {
+  background: var(--pl-white);
+  border-radius: 0 var(--pl-radius-image) var(--pl-radius-image) 0;
+  border-left: 3px solid var(--pl-pink);
+  box-shadow: var(--pl-shadow-card);
+  padding: 14px 16px;
+  margin: 12px 0 0;
+}
+
+.pl9-equivalent-value {
+  font-family: var(--pl-font);
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--pl-coal);
+  line-height: 1.6;
+  letter-spacing: -0.002em;
+  display: block;
+  margin-top: 5px;
+}
+
+/* ── Meta label ─────────────────────────────────────────────────────────────── */
+.pl9-meta-label {
+  font-family: var(--pl-font);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--pl-slate);
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* ── Tags — Vivacious Pink pill ─────────────────────────────────────────────── */
+.pl9-tags-block {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 12px 0 0;
+  background: var(--pl-pink);
+  border-radius: var(--pl-radius-tag);
+  padding: 6px 16px;
+}
+
+.pl9-tags-value {
+  font-family: var(--pl-font);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--pl-white);
+  letter-spacing: -0.002em;
+}
+
+/* ── Image ──────────────────────────────────────────────────────────────────── */
+.pl9-image {
+  margin: 14px auto;
+  max-width: 360px;
+  border-radius: var(--pl-radius-image);
+  overflow: hidden;
+}
+
+.pl9-image img {
+  max-width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Night mode ──────────────────────────────────────────────────────────────── */
+.night_mode .card {
+  background: linear-gradient(135deg, #1a0830 0%, #2f07b8 55%, #0d0d1a 100%);
+  color: #f0eef8;
+}
+
+.night_mode .pl9-word     { color: #f0eef8; }
+.night_mode .pl9-divider  { border-top-color: rgba(240, 238, 248, 0.12); }
+.night_mode .pl9-definition { color: #e8e4f4; }
+
+.night_mode .pl9-pos { background: #cc1077; }
+
+.night_mode .pl9-sentence-block { box-shadow: none; }
+
+.night_mode .pl9-examples-block {
+  background: #1c1c2e;
+  box-shadow: none;
+}
+
+.night_mode .pl9-examples-text { color: #c8c4e0; }
+.night_mode .pl9-section-label--dark { color: #7878a0; }
+
+.night_mode .pl9-equivalent-block {
+  background: #1c1c2e;
+  box-shadow: none;
+  border-left-color: #cc1077;
+}
+
+.night_mode .pl9-equivalent-value { color: #c8c4e0; }
+.night_mode .pl9-meta-label       { color: #7878a0; }
+
+.night_mode .pl9-tags-block { background: #cc1077; }
+
+/* ── Audio replay button — Vivacious Pink fill ───────────────────────────────── */
+.replay-button svg { width: 22px; height: 22px; }
+
+.replay-button svg circle { fill: var(--pl-pink); }
+.replay-button svg path   { stroke: var(--pl-white); fill: var(--pl-white); }
+
+.night_mode .replay-button svg circle { fill: #cc1077; }
+.night_mode .replay-button svg path   { stroke: #f0eef8; fill: #f0eef8; }

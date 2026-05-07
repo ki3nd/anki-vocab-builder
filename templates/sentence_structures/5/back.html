@@ -1,0 +1,37 @@
+<div class="cu5-back">
+
+  <div class="cu5-word-wrap">
+    <span class="cu5-word">{{Structure}}</span>
+  </div>
+
+  <hr class="cu5-divider">
+
+  {{#Meaning}}
+  <div class="cu5-definition">{{Meaning}}</div>
+  <hr class="cu5-divider">
+  {{/Meaning}}
+
+  {{#Examples}}
+  <div class="cu5-examples-block">
+    <span class="cu5-section-label">examples</span>
+    <div class="cu5-examples-text">{{Examples}}</div>
+  </div>
+  {{/Examples}}
+
+  {{#Equivalent}}
+  <div class="cu5-equivalent-block">
+    <span class="cu5-meta-label">equivalent</span>
+    <span class="cu5-equivalent-value">{{Equivalent}}</span>
+  </div>
+  {{/Equivalent}}
+
+  {{#Tags}}
+  <div class="cu5-tags-block">
+    <span class="cu5-section-label">tags</span>
+    <span class="cu5-tags-value">{{Tags}}</span>
+  </div>
+  {{/Tags}}
+
+  {{#Image}}<div class="cu5-image">{{Image}}</div>{{/Image}}
+
+</div>

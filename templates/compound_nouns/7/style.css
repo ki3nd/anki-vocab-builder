@@ -1,0 +1,364 @@
+/* ── Cycle Design System — Vocabulary Template 7 ─────────────────────────── */
+/* "Digital Sandbox with Soft Precision" — white canvas, Eudoxus display,    */
+/* tri-color pastel badge system (violet / blue / amber), soft card shadows   */
+
+:root {
+  --cy-black:      #171618;
+  --cy-white:      #ffffff;
+  --cy-graphite:   #727578;
+  --cy-light-gray: #f7f7f7;
+  --cy-silver:     #efefef;
+  --cy-border:     #dadada;
+
+  /* Tri-color badge system */
+  --cy-violet-bg:  #e7e0fe;
+  --cy-violet-fg:  #38296c;
+  --cy-blue-bg:    #cfeff8;
+  --cy-blue-fg:    #004d60;
+  --cy-amber-bg:   #feedcc;
+  --cy-amber-fg:   #6c4800;
+
+  /* Paler tints for block fills */
+  --cy-lilac:      #f5f0ff;
+  --cy-cloud:      #defafe;
+  --cy-apricot:    #fff6e1;
+
+  --cy-font-display: 'Eudoxus Sans', Arial, ui-sans-serif, system-ui, sans-serif;
+  --cy-font-ui:      'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  --cy-shadow-card:   rgba(239, 239, 239, 0.55) 0px 2px 15px 0px;
+  --cy-shadow-subtle: rgba(23, 24, 26, 0.1) 0px 0px 0px 1px,
+                      rgba(23, 24, 26, 0.03) 0px 8px 16px 0px;
+
+  --cy-radius-card:  20px;
+  --cy-radius-badge: 100px;
+  --cy-radius-btn:   10px;
+}
+
+/* ── Base ──────────────────────────────────────────────────────────────────── */
+.card {
+  font-family: var(--cy-font-ui);
+  font-size: 15px;
+  line-height: 1.47;
+  background: var(--cy-white);
+  color: var(--cy-black);
+  padding: 24px 20px 20px;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Word — Eudoxus Sans 800, display scale ─────────────────────────────────── */
+.cy7-word-wrap {
+  text-align: center;
+  margin: 0 0 6px;
+}
+
+.cy7-word {
+  font-family: var(--cy-font-display);
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--cy-black);
+  line-height: 1.05;
+  letter-spacing: -1.39px;
+}
+
+/* ── IPA — Inter, Graphite ──────────────────────────────────────────────────── */
+.cy7-ipa {
+  font-family: var(--cy-font-ui);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--cy-graphite);
+  text-align: center;
+  letter-spacing: -0.14px;
+  margin: 0 0 10px;
+}
+
+/* ── Audio row ──────────────────────────────────────────────────────────────── */
+.cy7-audio-row {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  margin: 6px 0;
+}
+
+.cy7-audio-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 20px;
+}
+
+.cy7-audio-flag {
+  font-size: 15px;
+  line-height: 1;
+}
+
+/* ── Part of Speech — Soft Lavender + Feedback Violet badge ─────────────────── */
+.cy7-pos-row {
+  text-align: center;
+  margin: 12px 0 4px;
+}
+
+.cy7-pos {
+  display: inline-block;
+  font-family: var(--cy-font-ui);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: -0.11px;
+  color: var(--cy-violet-fg);
+  background: var(--cy-violet-bg);
+  border-radius: var(--cy-radius-badge);
+  padding: 4px 14px;
+}
+
+/* ── Divider — Silver Mist ──────────────────────────────────────────────────── */
+.cy7-divider {
+  border: none;
+  border-top: 1px solid var(--cy-silver);
+  margin: 16px 0;
+}
+
+/* ── Sentence block — Light Gray card, soft shadow ──────────────────────────── */
+.cy7-sentence-block {
+  background: var(--cy-light-gray);
+  border-radius: var(--cy-radius-card);
+  box-shadow: var(--cy-shadow-card);
+  padding: 16px 18px;
+  margin: 4px 0 0;
+}
+
+.cy7-sentence-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.cy7-sentence-text {
+  font-family: var(--cy-font-ui);
+  font-size: 14px;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--cy-black);
+  line-height: 1.6;
+  letter-spacing: -0.14px;
+}
+
+.cy7-sent-audio {
+  font-size: 20px;
+  line-height: 1;
+}
+
+/* ── Section label — Inter 12px, Graphite ───────────────────────────────────── */
+.cy7-section-label {
+  font-family: var(--cy-font-ui);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: -0.11px;
+  color: var(--cy-graphite);
+}
+
+/* ── Definition — Eudoxus Sans 700, heading scale ──────────────────────────── */
+.cy7-definition {
+  font-family: var(--cy-font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--cy-black);
+  line-height: 1.4;
+  letter-spacing: -0.63px;
+  text-align: left;
+  margin: 4px 0;
+}
+
+/* ── Examples block — Pale Lilac card ──────────────────────────────────────── */
+.cy7-examples-block {
+  background: var(--cy-lilac);
+  border-radius: var(--cy-radius-card);
+  padding: 14px 16px;
+  margin: 4px 0 0;
+}
+
+.cy7-examples-text {
+  font-family: var(--cy-font-ui);
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--cy-violet-fg);
+  line-height: 2;
+  letter-spacing: -0.13px;
+  text-align: left;
+  margin-top: 8px;
+}
+
+/* ── Quote — Feedback Violet left border ────────────────────────────────────── */
+.cy7-quote {
+  font-family: var(--cy-font-ui);
+  font-size: 13px;
+  font-style: italic;
+  color: var(--cy-graphite);
+  border-left: 3px solid var(--cy-violet-fg);
+  background: var(--cy-light-gray);
+  border-radius: 0 var(--cy-radius-btn) var(--cy-radius-btn) 0;
+  padding: 10px 14px;
+  margin: 12px 0;
+  line-height: 1.5;
+  letter-spacing: -0.13px;
+}
+
+/* ── Tags block — Sun Mist + Insight Amber badge ────────────────────────────── */
+.cy7-tags-block {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 12px 0 0;
+  background: var(--cy-amber-bg);
+  border-radius: var(--cy-radius-badge);
+  padding: 7px 16px;
+}
+
+.cy7-tags-value {
+  font-family: var(--cy-font-ui);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--cy-amber-fg);
+  letter-spacing: -0.11px;
+}
+
+/* ── Synonyms / Antonyms — Sky Tint + Mellow Apricot pastel cards ───────────── */
+.cy7-meta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.cy7-syn-block,
+.cy7-ant-block {
+  border-radius: var(--cy-radius-card);
+  padding: 14px 16px;
+  text-align: left;
+}
+
+.cy7-syn-block { background: var(--cy-cloud); }
+.cy7-ant-block { background: var(--cy-apricot); }
+
+.cy7-meta-label {
+  font-family: var(--cy-font-ui);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: -0.11px;
+  color: var(--cy-blue-fg);
+  display: block;
+  margin-bottom: 5px;
+}
+
+.cy7-meta-label--amber { color: var(--cy-amber-fg); }
+
+.cy7-meta-value {
+  font-family: var(--cy-font-ui);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: -0.13px;
+  display: block;
+}
+
+.cy7-meta-value--blue  { color: var(--cy-blue-fg); }
+.cy7-meta-value--amber { color: var(--cy-amber-fg); }
+
+/* ── Image ──────────────────────────────────────────────────────────────────── */
+.cy7-image {
+  margin: 14px auto;
+  max-width: 360px;
+  border-radius: var(--cy-radius-card);
+  overflow: hidden;
+}
+
+.cy7-image img {
+  max-width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Search links — Agent Blue ──────────────────────────────────────────────── */
+.cy7-search-links {
+  font-family: var(--cy-font-ui);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: -0.11px;
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 14px;
+  border-top: 1px solid var(--cy-silver);
+}
+
+.cy7-search-links a {
+  color: var(--cy-blue-fg);
+  text-decoration: none;
+}
+
+.cy7-search-links a:hover { text-decoration: underline; }
+
+.cy7-sep {
+  color: var(--cy-border);
+  margin: 0 6px;
+}
+
+/* ── Night mode ──────────────────────────────────────────────────────────────── */
+.night_mode .card {
+  background: #18181a;
+  color: #f0eff2;
+}
+
+.night_mode .cy7-word  { color: #f0eff2; }
+.night_mode .cy7-ipa   { color: #727578; }
+
+.night_mode .cy7-pos {
+  background: #2d2548;
+  color: #b9aef5;
+}
+
+.night_mode .cy7-divider { border-top-color: #2a2a2e; }
+
+.night_mode .cy7-sentence-block {
+  background: #222226;
+  box-shadow: none;
+}
+
+.night_mode .cy7-sentence-text { color: #d8d6dc; }
+
+.night_mode .cy7-definition { color: #f0eff2; }
+
+.night_mode .cy7-examples-block { background: #201c30; }
+.night_mode .cy7-examples-text  { color: #b9aef5; }
+
+.night_mode .cy7-quote {
+  background: #222226;
+  color: #727578;
+  border-left-color: #6386fe;
+}
+
+.night_mode .cy7-tags-block   { background: #2e2210; }
+.night_mode .cy7-tags-value   { color: #d4a04a; }
+
+.night_mode .cy7-syn-block    { background: #0f2030; }
+.night_mode .cy7-ant-block    { background: #2a1e0a; }
+
+.night_mode .cy7-meta-label         { color: #5a96ac; }
+.night_mode .cy7-meta-label--amber  { color: #b07830; }
+.night_mode .cy7-meta-value--blue   { color: #7ecce0; }
+.night_mode .cy7-meta-value--amber  { color: #c89040; }
+
+.night_mode .cy7-search-links  { border-top-color: #2a2a2e; }
+.night_mode .cy7-search-links a { color: #7ecce0; }
+.night_mode .cy7-sep            { color: #2a2a2e; }
+
+/* ── Audio replay button — Feedback Violet fill ──────────────────────────── */
+.replay-button svg { width: 22px; height: 22px; }
+
+.replay-button svg circle { fill: var(--cy-violet-fg); }
+.replay-button svg path   { stroke: var(--cy-white); fill: var(--cy-white); }
+
+.night_mode .replay-button svg circle { fill: #6386fe; }
+.night_mode .replay-button svg path   { stroke: #18181a; fill: #18181a; }

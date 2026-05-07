@@ -1,0 +1,269 @@
+/* ── Cycle Design System — Sentence Structures Template 7 ────────────────── */
+/* "Digital Sandbox with Soft Precision" — white canvas, Eudoxus display,    */
+/* tri-color pastel badge system (violet / blue / amber), soft card shadows   */
+
+:root {
+  --cy-black:      #171618;
+  --cy-white:      #ffffff;
+  --cy-graphite:   #727578;
+  --cy-light-gray: #f7f7f7;
+  --cy-silver:     #efefef;
+  --cy-border:     #dadada;
+
+  /* Tri-color badge system */
+  --cy-violet-bg:  #e7e0fe;
+  --cy-violet-fg:  #38296c;
+  --cy-blue-bg:    #cfeff8;
+  --cy-blue-fg:    #004d60;
+  --cy-amber-bg:   #feedcc;
+  --cy-amber-fg:   #6c4800;
+
+  /* Paler tints for block fills */
+  --cy-lilac:      #f5f0ff;
+  --cy-cloud:      #defafe;
+  --cy-apricot:    #fff6e1;
+
+  --cy-font-display: 'Eudoxus Sans', Arial, ui-sans-serif, system-ui, sans-serif;
+  --cy-font-ui:      'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  --cy-shadow-card:   rgba(239, 239, 239, 0.55) 0px 2px 15px 0px;
+  --cy-shadow-subtle: rgba(23, 24, 26, 0.1) 0px 0px 0px 1px,
+                      rgba(23, 24, 26, 0.03) 0px 8px 16px 0px;
+
+  --cy-radius-card:  20px;
+  --cy-radius-badge: 100px;
+  --cy-radius-btn:   10px;
+}
+
+/* ── Base ──────────────────────────────────────────────────────────────────── */
+.card {
+  font-family: var(--cy-font-ui);
+  font-size: 15px;
+  line-height: 1.47;
+  background: var(--cy-white);
+  color: var(--cy-black);
+  padding: 24px 20px 20px;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Structure — Eudoxus Sans 700, reduced for multi-word patterns ──────────── */
+.cy7-word-wrap {
+  text-align: center;
+  margin: 0 0 6px;
+}
+
+.cy7-word {
+  font-family: var(--cy-font-display);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--cy-black);
+  line-height: 1.25;
+  letter-spacing: -0.56px;
+}
+
+/* ── Tags pill on front — Soft Lavender + Feedback Violet ───────────────────── */
+.cy7-pos-row {
+  text-align: center;
+  margin: 12px 0 4px;
+}
+
+.cy7-pos {
+  display: inline-block;
+  font-family: var(--cy-font-ui);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: -0.11px;
+  color: var(--cy-violet-fg);
+  background: var(--cy-violet-bg);
+  border-radius: var(--cy-radius-badge);
+  padding: 4px 14px;
+  white-space: normal;
+  word-break: break-word;
+}
+
+/* ── Divider — Silver Mist ──────────────────────────────────────────────────── */
+.cy7-divider {
+  border: none;
+  border-top: 1px solid var(--cy-silver);
+  margin: 16px 0;
+}
+
+/* ── Sentence block — Light Gray card, soft shadow ──────────────────────────── */
+.cy7-sentence-block {
+  background: var(--cy-light-gray);
+  border-radius: var(--cy-radius-card);
+  box-shadow: var(--cy-shadow-card);
+  padding: 16px 18px;
+  margin: 4px 0 0;
+}
+
+.cy7-sentence-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.cy7-sentence-text {
+  font-family: var(--cy-font-ui);
+  font-size: 14px;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--cy-black);
+  line-height: 1.6;
+  letter-spacing: -0.14px;
+}
+
+/* ── Section label ──────────────────────────────────────────────────────────── */
+.cy7-section-label {
+  font-family: var(--cy-font-ui);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: -0.11px;
+  color: var(--cy-graphite);
+}
+
+/* ── Meaning — Eudoxus Sans 700 ─────────────────────────────────────────────── */
+.cy7-definition {
+  font-family: var(--cy-font-display);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--cy-black);
+  line-height: 1.45;
+  letter-spacing: -0.5px;
+  text-align: left;
+  margin: 4px 0;
+}
+
+/* ── Examples block — Pale Lilac card ──────────────────────────────────────── */
+.cy7-examples-block {
+  background: var(--cy-lilac);
+  border-radius: var(--cy-radius-card);
+  padding: 14px 16px;
+  margin: 4px 0 0;
+}
+
+.cy7-examples-text {
+  font-family: var(--cy-font-ui);
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--cy-violet-fg);
+  line-height: 2;
+  letter-spacing: -0.13px;
+  text-align: left;
+  margin-top: 8px;
+}
+
+/* ── Equivalent block — Cloud Blue card with Agent Blue left border ──────────── */
+.cy7-equivalent-block {
+  background: var(--cy-cloud);
+  border-radius: 0 var(--cy-radius-btn) var(--cy-radius-btn) 0;
+  border-left: 3px solid var(--cy-blue-fg);
+  padding: 12px 14px;
+  margin: 12px 0 0;
+}
+
+.cy7-equivalent-value {
+  font-family: var(--cy-font-ui);
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--cy-blue-fg);
+  line-height: 1.6;
+  letter-spacing: -0.13px;
+  display: block;
+  margin-top: 5px;
+}
+
+/* ── Meta label shared ──────────────────────────────────────────────────────── */
+.cy7-meta-label {
+  font-family: var(--cy-font-ui);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: -0.11px;
+  color: var(--cy-blue-fg);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* ── Tags block — Sun Mist + Insight Amber badge ────────────────────────────── */
+.cy7-tags-block {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 12px 0 0;
+  background: var(--cy-amber-bg);
+  border-radius: var(--cy-radius-badge);
+  padding: 7px 16px;
+}
+
+.cy7-tags-value {
+  font-family: var(--cy-font-ui);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--cy-amber-fg);
+  letter-spacing: -0.11px;
+}
+
+/* ── Image ──────────────────────────────────────────────────────────────────── */
+.cy7-image {
+  margin: 14px auto;
+  max-width: 360px;
+  border-radius: var(--cy-radius-card);
+  overflow: hidden;
+}
+
+.cy7-image img {
+  max-width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Night mode ──────────────────────────────────────────────────────────────── */
+.night_mode .card {
+  background: #18181a;
+  color: #f0eff2;
+}
+
+.night_mode .cy7-word  { color: #f0eff2; }
+
+.night_mode .cy7-pos {
+  background: #2d2548;
+  color: #b9aef5;
+}
+
+.night_mode .cy7-divider { border-top-color: #2a2a2e; }
+
+.night_mode .cy7-sentence-block {
+  background: #222226;
+  box-shadow: none;
+}
+
+.night_mode .cy7-sentence-text { color: #d8d6dc; }
+
+.night_mode .cy7-definition { color: #f0eff2; }
+
+.night_mode .cy7-examples-block { background: #201c30; }
+.night_mode .cy7-examples-text  { color: #b9aef5; }
+
+.night_mode .cy7-equivalent-block {
+  background: #0f2030;
+  border-left-color: #5a96ac;
+}
+
+.night_mode .cy7-equivalent-value { color: #7ecce0; }
+.night_mode .cy7-meta-label       { color: #5a96ac; }
+
+.night_mode .cy7-tags-block  { background: #2e2210; }
+.night_mode .cy7-tags-value  { color: #d4a04a; }
+
+/* ── Audio replay button — Feedback Violet fill ──────────────────────────── */
+.replay-button svg { width: 22px; height: 22px; }
+
+.replay-button svg circle { fill: var(--cy-violet-fg); }
+.replay-button svg path   { stroke: var(--cy-white); fill: var(--cy-white); }
+
+.night_mode .replay-button svg circle { fill: #6386fe; }
+.night_mode .replay-button svg path   { stroke: #18181a; fill: #18181a; }

@@ -1,0 +1,88 @@
+<div class="ap4-back">
+
+  <div class="ap4-word-wrap">
+    <span class="ap4-word">{{PhrasalVerb}}</span>
+  </div>
+
+  {{#IPA}}<div class="ap4-ipa">{{IPA}}</div>{{/IPA}}
+
+  {{#AudioAmerican}}{{#AudioBritish}}
+  <div class="ap4-audio-row">
+    <div class="ap4-audio-item"><span class="ap4-audio-flag">🇺🇸</span>{{AudioAmerican}}</div>
+    <div class="ap4-audio-item"><span class="ap4-audio-flag">🇬🇧</span>{{AudioBritish}}</div>
+  </div>
+  {{/AudioBritish}}{{/AudioAmerican}}
+  {{#AudioAmerican}}{{^AudioBritish}}
+  <div class="ap4-audio-row">
+    <div class="ap4-audio-item"><span class="ap4-audio-flag">🇺🇸</span>{{AudioAmerican}}</div>
+  </div>
+  {{/AudioBritish}}{{/AudioAmerican}}
+  {{^AudioAmerican}}{{#AudioBritish}}
+  <div class="ap4-audio-row">
+    <div class="ap4-audio-item"><span class="ap4-audio-flag">🇬🇧</span>{{AudioBritish}}</div>
+  </div>
+  {{/AudioBritish}}{{/AudioAmerican}}
+
+  <hr class="ap4-divider">
+
+  {{#Definition}}
+  <div class="ap4-definition">{{Definition}}</div>
+  <hr class="ap4-divider">
+  {{/Definition}}
+
+  {{#Examples}}
+  <div class="ap4-examples-block">
+    <span class="ap4-section-label">Examples</span>
+    <div class="ap4-examples-text">{{Examples}}</div>
+  </div>
+  {{/Examples}}
+
+  {{#Quote}}
+  <div class="ap4-quote">{{Quote}}</div>
+  {{/Quote}}
+
+  {{#Tags}}
+  <div class="ap4-tags-block">
+    <span class="ap4-section-label">Tags</span>
+    <span class="ap4-tags-value">{{Tags}}</span>
+  </div>
+  {{/Tags}}
+
+  {{#Synonyms}}{{#Antonyms}}
+  <div class="ap4-meta-grid">
+    <div class="ap4-syn-block">
+      <span class="ap4-meta-label">Synonyms</span>
+      <span class="ap4-meta-value">{{Synonyms}}</span>
+    </div>
+    <div class="ap4-ant-block">
+      <span class="ap4-meta-label">Antonyms</span>
+      <span class="ap4-meta-value">{{Antonyms}}</span>
+    </div>
+  </div>
+  {{/Antonyms}}{{/Synonyms}}
+  {{#Synonyms}}{{^Antonyms}}
+  <div class="ap4-syn-block" style="margin-top:12px;">
+    <span class="ap4-meta-label">Synonyms</span>
+    <span class="ap4-meta-value">{{Synonyms}}</span>
+  </div>
+  {{/Antonyms}}{{/Synonyms}}
+  {{^Synonyms}}{{#Antonyms}}
+  <div class="ap4-ant-block" style="margin-top:12px;">
+    <span class="ap4-meta-label">Antonyms</span>
+    <span class="ap4-meta-value">{{Antonyms}}</span>
+  </div>
+  {{/Antonyms}}{{/Synonyms}}
+
+  {{#Image}}<div class="ap4-image">{{Image}}</div>{{/Image}}
+
+  <div class="ap4-search-links">
+    <a href="https://dict.laban.vn/find?type=1&query={{text:PhrasalVerb}}">Laban</a>
+    <span class="ap4-sep">·</span>
+    <a href="https://dictionary.cambridge.org/dictionary/english/{{text:PhrasalVerb}}">Cambridge</a>
+    <span class="ap4-sep">·</span>
+    <a href="https://youglish.com/search/{{text:PhrasalVerb}}/all?">YouGlish</a>
+    <span class="ap4-sep">·</span>
+    <a href="http://images.google.com/search?tbm=isch&q={{text:PhrasalVerb}}">Images</a>
+  </div>
+
+</div>

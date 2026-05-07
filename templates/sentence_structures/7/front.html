@@ -1,0 +1,24 @@
+<div class="cy7-front">
+
+  <div class="cy7-word-wrap">
+    <span class="cy7-word">{{Structure}}</span>
+  </div>
+
+  {{#Tags}}
+  <div class="cy7-pos-row"><span class="cy7-pos">{{Tags}}</span></div>
+  {{/Tags}}
+
+  <hr class="cy7-divider">
+
+  {{#Sentence}}
+  <div class="cy7-sentence-block">
+    <div class="cy7-sentence-header">
+      <span class="cy7-section-label">Example</span>
+    </div>
+    <div class="cy7-sentence-text">{{Sentence}}</div>
+  </div>
+  {{/Sentence}}
+
+  {{#Image}}<div class="cy7-image">{{Image}}</div>{{/Image}}
+
+</div>

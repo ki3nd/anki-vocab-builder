@@ -1,0 +1,344 @@
+/* ── OpenAI Design System — Vocabulary Template 10 ───────────────────────── */
+/* "Blank page before the first word" — pure white, achromatic palette,      */
+/* Inter 600 at -1.44px tracking, 6.08px cards vs 9999px pills, no shadows   */
+
+:root {
+  --oa-void:       #000000;
+  --oa-canvas:     #ffffff;
+  --oa-chalk:      #f1f1f1;
+  --oa-graphite:   #666666;
+  --oa-ash:        #8f8f8f;
+  --oa-fog:        #e5e7eb;
+
+  --oa-font: 'OpenAI Sans', 'Inter', 'DM Sans', ui-sans-serif, system-ui,
+             -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --oa-shadow-cta: rgba(0, 0, 0, 0.02) 0px 4px 6px 0px,
+                   rgba(0, 0, 0, 0.05) 0px 0px 2px 0px;
+
+  --oa-radius-card: 6.08px;
+  --oa-radius-pill: 9999px;
+  --oa-radius-soft: 40px;
+}
+
+/* ── Base ──────────────────────────────────────────────────────────────────── */
+.card {
+  font-family: var(--oa-font);
+  font-size: 15px;
+  line-height: 1.5;
+  background: var(--oa-canvas);
+  color: var(--oa-void);
+  padding: 24px 20px 20px;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "calt", "liga";
+}
+
+/* ── Word — Inter 600, 48px, -1.44px tracking ──────────────────────────────── */
+.oa10-word-wrap {
+  text-align: center;
+  margin: 0 0 6px;
+}
+
+.oa10-word {
+  font-family: var(--oa-font);
+  font-size: 48px;
+  font-weight: 600;
+  color: var(--oa-void);
+  line-height: 1.16;
+  letter-spacing: -1.44px;
+  font-feature-settings: "calt", "liga";
+}
+
+/* ── IPA — Inter 400, Graphite ─────────────────────────────────────────────── */
+.oa10-ipa {
+  font-family: var(--oa-font);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--oa-graphite);
+  text-align: center;
+  margin: 0 0 10px;
+}
+
+/* ── Audio row ──────────────────────────────────────────────────────────────── */
+.oa10-audio-row {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  margin: 6px 0;
+}
+
+.oa10-audio-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 20px;
+}
+
+.oa10-audio-flag {
+  font-size: 15px;
+  line-height: 1;
+}
+
+/* ── POS — soft chip: rgba(0,0,0,0.04) bg, 40px radius ──────────────────────── */
+.oa10-pos-row {
+  text-align: center;
+  margin: 12px 0 4px;
+}
+
+.oa10-pos {
+  display: inline-block;
+  font-family: var(--oa-font);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--oa-void);
+  background: rgba(0, 0, 0, 0.04);
+  border-radius: var(--oa-radius-soft);
+  padding: 4px 14px;
+  letter-spacing: 0.011em;
+}
+
+/* ── Divider — Fog Border ───────────────────────────────────────────────────── */
+.oa10-divider {
+  border: none;
+  border-top: 1px solid var(--oa-fog);
+  margin: 16px 0;
+}
+
+/* ── Sentence block — Chalk fill, 6.08px radius, no shadow ─────────────────── */
+.oa10-sentence-block {
+  background: var(--oa-chalk);
+  border-radius: var(--oa-radius-card);
+  padding: 16px 18px;
+  margin: 4px 0 0;
+}
+
+.oa10-sentence-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.oa10-sentence-text {
+  font-family: var(--oa-font);
+  font-size: 14px;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--oa-void);
+  line-height: 1.6;
+}
+
+.oa10-sent-audio {
+  font-size: 20px;
+  line-height: 1;
+}
+
+/* ── Section label — 13px 500, +0.011em, Graphite, uppercase ────────────────── */
+.oa10-section-label {
+  font-family: var(--oa-font);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--oa-graphite);
+  letter-spacing: 0.011em;
+  text-transform: uppercase;
+}
+
+/* ── Definition — Inter 600, 17px ──────────────────────────────────────────── */
+.oa10-definition {
+  font-family: var(--oa-font);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--oa-void);
+  line-height: 1.4;
+  text-align: left;
+  margin: 4px 0;
+}
+
+/* ── Examples block — white + Fog border, 6.08px radius (editorial card) ────── */
+.oa10-examples-block {
+  background: var(--oa-canvas);
+  border-radius: var(--oa-radius-card);
+  border: 1px solid var(--oa-fog);
+  padding: 16px 18px;
+  margin: 4px 0 0;
+}
+
+.oa10-examples-text {
+  font-family: var(--oa-font);
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--oa-graphite);
+  line-height: 2;
+  text-align: left;
+  margin-top: 8px;
+}
+
+/* ── Quote — black left border, chalk bg, 6.08px radius ─────────────────────── */
+.oa10-quote {
+  font-family: var(--oa-font);
+  font-size: 13px;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--oa-graphite);
+  border-left: 2px solid var(--oa-void);
+  background: var(--oa-chalk);
+  border-radius: 0 var(--oa-radius-card) var(--oa-radius-card) 0;
+  padding: 10px 14px;
+  margin: 12px 0;
+  line-height: 1.6;
+}
+
+/* ── Tags — ghost pill: transparent + fog border, 9999px ────────────────────── */
+.oa10-tags-block {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 12px 0 0;
+  border: 1px solid var(--oa-fog);
+  border-radius: var(--oa-radius-pill);
+  padding: 5px 14px;
+}
+
+.oa10-tags-value {
+  font-family: var(--oa-font);
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--oa-graphite);
+  letter-spacing: 0.011em;
+}
+
+/* ── Syn/Ant grid — chalk cards, 6.08px radius, fog border ──────────────────── */
+.oa10-meta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.oa10-syn-block,
+.oa10-ant-block {
+  background: var(--oa-chalk);
+  border-radius: var(--oa-radius-card);
+  border: 1px solid var(--oa-fog);
+  padding: 12px 14px;
+  text-align: left;
+}
+
+.oa10-meta-label {
+  font-family: var(--oa-font);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--oa-graphite);
+  letter-spacing: 0.011em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.oa10-meta-value {
+  font-family: var(--oa-font);
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--oa-void);
+  line-height: 1.5;
+  display: block;
+}
+
+/* ── Image ──────────────────────────────────────────────────────────────────── */
+.oa10-image {
+  margin: 14px auto;
+  max-width: 360px;
+  border-radius: var(--oa-radius-card);
+  overflow: hidden;
+}
+
+.oa10-image img {
+  max-width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Search links — Graphite, underline on hover ────────────────────────────── */
+.oa10-search-links {
+  font-family: var(--oa-font);
+  font-size: 13px;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 14px;
+  border-top: 1px solid var(--oa-fog);
+  letter-spacing: 0.011em;
+}
+
+.oa10-search-links a {
+  color: var(--oa-graphite);
+  text-decoration: none;
+}
+
+.oa10-search-links a:hover { text-decoration: underline; }
+
+.oa10-sep {
+  color: var(--oa-fog);
+  margin: 0 6px;
+}
+
+/* ── Night mode ──────────────────────────────────────────────────────────────── */
+.night_mode .card {
+  background: #0a0a0a;
+  color: #f8f8f8;
+}
+
+.night_mode .oa10-word      { color: #f8f8f8; }
+.night_mode .oa10-ipa       { color: #888888; }
+.night_mode .oa10-definition { color: #f8f8f8; }
+
+.night_mode .oa10-pos {
+  background: rgba(255, 255, 255, 0.06);
+  color: #f8f8f8;
+}
+
+.night_mode .oa10-divider { border-top-color: rgba(255, 255, 255, 0.1); }
+
+.night_mode .oa10-sentence-block { background: #1a1a1a; }
+.night_mode .oa10-sentence-text  { color: #e8e8e8; }
+
+.night_mode .oa10-examples-block {
+  background: #111111;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.night_mode .oa10-examples-text { color: #999999; }
+
+.night_mode .oa10-quote {
+  background: #1a1a1a;
+  color: #888888;
+  border-left-color: #f8f8f8;
+}
+
+.night_mode .oa10-tags-block  { border-color: rgba(255, 255, 255, 0.15); }
+.night_mode .oa10-tags-value  { color: #888888; }
+
+.night_mode .oa10-syn-block,
+.night_mode .oa10-ant-block {
+  background: #1a1a1a;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.night_mode .oa10-meta-label { color: #666666; }
+.night_mode .oa10-meta-value { color: #cccccc; }
+
+.night_mode .oa10-search-links  { border-top-color: rgba(255, 255, 255, 0.1); }
+.night_mode .oa10-search-links a { color: #888888; }
+.night_mode .oa10-sep            { color: rgba(255, 255, 255, 0.12); }
+
+/* ── Audio replay button — Void fill (sole black CTA) ───────────────────────── */
+.replay-button svg { width: 22px; height: 22px; }
+
+.replay-button svg circle { fill: var(--oa-void); }
+.replay-button svg path   { stroke: var(--oa-canvas); fill: var(--oa-canvas); }
+
+.night_mode .replay-button svg circle { fill: #f8f8f8; }
+.night_mode .replay-button svg path   { stroke: #0a0a0a; fill: #0a0a0a; }

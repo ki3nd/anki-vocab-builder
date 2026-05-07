@@ -1,0 +1,50 @@
+<div class="oa10-front">
+
+  <div class="oa10-word-wrap">
+    <span class="oa10-word">{{PhrasalVerb}}</span>
+  </div>
+
+  {{#IPA}}<div class="oa10-ipa">{{IPA}}</div>{{/IPA}}
+
+  {{#AudioAmerican}}{{#AudioBritish}}
+  <div class="oa10-audio-row">
+    <div class="oa10-audio-item"><span class="oa10-audio-flag">🇺🇸</span>{{AudioAmerican}}</div>
+    <div class="oa10-audio-item"><span class="oa10-audio-flag">🇬🇧</span>{{AudioBritish}}</div>
+  </div>
+  {{/AudioBritish}}{{/AudioAmerican}}
+  {{#AudioAmerican}}{{^AudioBritish}}
+  <div class="oa10-audio-row">
+    <div class="oa10-audio-item"><span class="oa10-audio-flag">🇺🇸</span>{{AudioAmerican}}</div>
+  </div>
+  {{/AudioBritish}}{{/AudioAmerican}}
+  {{^AudioAmerican}}{{#AudioBritish}}
+  <div class="oa10-audio-row">
+    <div class="oa10-audio-item"><span class="oa10-audio-flag">🇬🇧</span>{{AudioBritish}}</div>
+  </div>
+  {{/AudioBritish}}{{/AudioAmerican}}
+
+  <hr class="oa10-divider">
+
+  {{#Sentence}}
+  <div class="oa10-sentence-block">
+    <div class="oa10-sentence-header">
+      <span class="oa10-section-label">Example</span>
+      {{#SentenceAudio}}<span class="oa10-sent-audio">{{SentenceAudio}}</span>{{/SentenceAudio}}
+    </div>
+    <div class="oa10-sentence-text">{{Sentence}}</div>
+  </div>
+  {{/Sentence}}
+
+  {{#Image}}<div class="oa10-image">{{Image}}</div>{{/Image}}
+
+  <div class="oa10-search-links">
+    <a href="https://dict.laban.vn/find?type=1&query={{text:PhrasalVerb}}">Laban</a>
+    <span class="oa10-sep">·</span>
+    <a href="https://dictionary.cambridge.org/dictionary/english/{{text:PhrasalVerb}}">Cambridge</a>
+    <span class="oa10-sep">·</span>
+    <a href="https://youglish.com/search/{{text:PhrasalVerb}}/all?">YouGlish</a>
+    <span class="oa10-sep">·</span>
+    <a href="http://images.google.com/search?tbm=isch&q={{text:PhrasalVerb}}">Images</a>
+  </div>
+
+</div>

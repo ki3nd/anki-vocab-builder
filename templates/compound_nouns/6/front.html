@@ -1,0 +1,50 @@
+<div class="fm6-front">
+
+  <div class="fm6-word-wrap">
+    <span class="fm6-word">{{CompoundNoun}}</span>
+  </div>
+
+  {{#IPA}}<div class="fm6-ipa">{{IPA}}</div>{{/IPA}}
+
+  {{#AudioAmerican}}{{#AudioBritish}}
+  <div class="fm6-audio-row">
+    <div class="fm6-audio-item"><span class="fm6-audio-flag">🇺🇸</span>{{AudioAmerican}}</div>
+    <div class="fm6-audio-item"><span class="fm6-audio-flag">🇬🇧</span>{{AudioBritish}}</div>
+  </div>
+  {{/AudioBritish}}{{/AudioAmerican}}
+  {{#AudioAmerican}}{{^AudioBritish}}
+  <div class="fm6-audio-row">
+    <div class="fm6-audio-item"><span class="fm6-audio-flag">🇺🇸</span>{{AudioAmerican}}</div>
+  </div>
+  {{/AudioBritish}}{{/AudioAmerican}}
+  {{^AudioAmerican}}{{#AudioBritish}}
+  <div class="fm6-audio-row">
+    <div class="fm6-audio-item"><span class="fm6-audio-flag">🇬🇧</span>{{AudioBritish}}</div>
+  </div>
+  {{/AudioBritish}}{{/AudioAmerican}}
+
+  <hr class="fm6-divider">
+
+  {{#Sentence}}
+  <div class="fm6-sentence-block">
+    <div class="fm6-sentence-header">
+      <span class="fm6-section-label">Example</span>
+      {{#SentenceAudio}}<span class="fm6-sent-audio">{{SentenceAudio}}</span>{{/SentenceAudio}}
+    </div>
+    <div class="fm6-sentence-text">{{Sentence}}</div>
+  </div>
+  {{/Sentence}}
+
+  {{#Image}}<div class="fm6-image">{{Image}}</div>{{/Image}}
+
+  <div class="fm6-search-links">
+    <a href="https://dict.laban.vn/find?type=1&query={{text:CompoundNoun}}">Laban</a>
+    <span class="fm6-sep">·</span>
+    <a href="https://dictionary.cambridge.org/dictionary/english/{{text:CompoundNoun}}">Cambridge</a>
+    <span class="fm6-sep">·</span>
+    <a href="https://youglish.com/search/{{text:CompoundNoun}}/all?">YouGlish</a>
+    <span class="fm6-sep">·</span>
+    <a href="http://images.google.com/search?tbm=isch&q={{text:CompoundNoun}}">Images</a>
+  </div>
+
+</div>

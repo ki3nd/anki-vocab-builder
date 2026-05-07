@@ -1,0 +1,409 @@
+/* ── Apple Design System — Vocabulary Template 4 ────────────────────────── */
+
+:root {
+  --ap-ink:          #1d1d1f;
+  --ap-graphite:     #707070;
+  --ap-slate:        #474747;
+  --ap-fog:          #f5f5f7;
+  --ap-snow:         #ffffff;
+  --ap-silver-mist:  #e8e8ed;
+  --ap-azure:        #0071e3;
+  --ap-cobalt:       #0066cc;
+
+  --ap-font-display: 'SF Pro Display', Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --ap-font-text:    'SF Pro Text',    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --ap-radius-card: 28px;
+  --ap-radius-pill: 999px;
+}
+
+/* ── Base ──────────────────────────────────────────────────────────────────── */
+.card {
+  font-family: var(--ap-font-text);
+  font-size: 17px;
+  line-height: 1.47;
+  letter-spacing: -0.1px;
+  background: var(--ap-fog);
+  color: var(--ap-ink);
+  padding: 28px 20px 20px;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Word — SF Pro Display 700, near-black, headline scale ────────────────── */
+.ap4-word-wrap {
+  text-align: center;
+  margin: 0 0 6px;
+}
+
+.ap4-word {
+  font-family: var(--ap-font-display);
+  font-size: 52px;
+  font-weight: 700;
+  color: var(--ap-ink);
+  line-height: 1.07;
+  letter-spacing: -0.9px;
+}
+
+/* ── IPA ────────────────────────────────────────────────────────────────────── */
+.ap4-ipa {
+  font-family: var(--ap-font-text);
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--ap-graphite);
+  text-align: center;
+  letter-spacing: -0.06px;
+  margin: 0 0 10px;
+}
+
+/* ── Audio row ──────────────────────────────────────────────────────────────── */
+.ap4-audio-row {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin: 6px 0;
+}
+
+.ap4-audio-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 20px;
+}
+
+.ap4-audio-flag {
+  font-size: 15px;
+  line-height: 1;
+}
+
+/* ── Part of Speech — Silver Mist pill, restrained ──────────────────────────── */
+.ap4-pos-row {
+  text-align: center;
+  margin: 12px 0 4px;
+}
+
+.ap4-pos {
+  display: inline-block;
+  font-family: var(--ap-font-text);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ap-slate);
+  background: var(--ap-silver-mist);
+  border-radius: var(--ap-radius-pill);
+  padding: 5px 16px;
+}
+
+/* ── Divider — hairline Silver Mist ─────────────────────────────────────────── */
+.ap4-divider {
+  border: none;
+  border-top: 1px solid var(--ap-silver-mist);
+  margin: 16px 0;
+}
+
+/* ── Sentence block — Snow card, geometry only, no color ────────────────────── */
+.ap4-sentence-block {
+  background: var(--ap-snow);
+  border-radius: var(--ap-radius-card);
+  padding: 20px 24px;
+  margin: 4px 0 0;
+}
+
+.ap4-sentence-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.ap4-sentence-text {
+  font-family: var(--ap-font-text);
+  font-size: 15px;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--ap-ink);
+  line-height: 1.5;
+  letter-spacing: -0.04px;
+}
+
+.ap4-sent-audio {
+  font-size: 20px;
+  line-height: 1;
+}
+
+/* ── Section label — 11px uppercase, graphite ───────────────────────────────── */
+.ap4-section-label {
+  font-family: var(--ap-font-text);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ap-graphite);
+}
+
+/* ── Definition — SF Pro Display weight, larger body ────────────────────────── */
+.ap4-definition {
+  font-family: var(--ap-font-display);
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--ap-ink);
+  line-height: 1.4;
+  letter-spacing: -0.2px;
+  text-align: left;
+  margin: 4px 0;
+}
+
+/* ── Examples block — Fog recessed card ────────────────────────────────────── */
+.ap4-examples-block {
+  background: var(--ap-fog);
+  border-radius: var(--ap-radius-card);
+  border: 1px solid var(--ap-silver-mist);
+  padding: 16px 20px;
+  margin: 4px 0 0;
+}
+
+.ap4-examples-text {
+  font-family: var(--ap-font-text);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--ap-ink);
+  line-height: 2;
+  letter-spacing: -0.04px;
+  text-align: left;
+  margin-top: 8px;
+}
+
+/* ── Quote — Azure left border, the sole accent ──────────────────────────────── */
+.ap4-quote {
+  font-family: var(--ap-font-text);
+  font-size: 13px;
+  font-style: italic;
+  color: var(--ap-graphite);
+  border-left: 3px solid var(--ap-azure);
+  background: var(--ap-snow);
+  border-radius: 0 10px 10px 0;
+  padding: 10px 16px;
+  margin: 14px 0;
+  line-height: 1.5;
+  letter-spacing: -0.03px;
+}
+
+/* ── Tags block — Silver Mist pill row ──────────────────────────────────────── */
+.ap4-tags-block {
+  background: var(--ap-silver-mist);
+  border-radius: var(--ap-radius-pill);
+  padding: 9px 20px;
+  margin: 12px 0 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.ap4-tags-value {
+  font-family: var(--ap-font-text);
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--ap-slate);
+  letter-spacing: -0.03px;
+}
+
+/* ── Synonyms / Antonyms — Snow / Fog card pair ────────────────────────────── */
+.ap4-meta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.ap4-syn-block,
+.ap4-ant-block {
+  border-radius: var(--ap-radius-card);
+  padding: 16px;
+  text-align: left;
+}
+
+.ap4-syn-block {
+  background: var(--ap-snow);
+  border: 1px solid var(--ap-silver-mist);
+}
+
+.ap4-ant-block {
+  background: var(--ap-fog);
+  border: 1px solid var(--ap-silver-mist);
+}
+
+.ap4-meta-label {
+  font-family: var(--ap-font-text);
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ap-graphite);
+  display: block;
+  margin-bottom: 6px;
+}
+
+.ap4-meta-value {
+  font-family: var(--ap-font-text);
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--ap-ink);
+  line-height: 1.5;
+  letter-spacing: -0.03px;
+  display: block;
+}
+
+/* ── Image ──────────────────────────────────────────────────────────────────── */
+.ap4-image {
+  margin: 14px auto;
+  max-width: 360px;
+  border-radius: var(--ap-radius-card);
+  overflow: hidden;
+}
+
+.ap4-image img {
+  max-width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Search links — Cobalt Link color ───────────────────────────────────────── */
+.ap4-search-links {
+  font-family: var(--ap-font-text);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: -0.26px;
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 14px;
+  border-top: 1px solid var(--ap-silver-mist);
+}
+
+.ap4-search-links a {
+  color: var(--ap-cobalt);
+  text-decoration: none;
+}
+
+.ap4-search-links a:hover {
+  text-decoration: underline;
+}
+
+.ap4-sep {
+  color: var(--ap-silver-mist);
+  margin: 0 6px;
+}
+
+/* ── Night mode ──────────────────────────────────────────────────────────────── */
+.night_mode .card {
+  background: #1c1c1e;
+  color: #f5f5f7;
+}
+
+.night_mode .ap4-word {
+  color: #f5f5f7;
+}
+
+.night_mode .ap4-ipa {
+  color: #8e8e93;
+}
+
+.night_mode .ap4-pos {
+  background: #3a3a3c;
+  color: #ebebf0;
+}
+
+.night_mode .ap4-divider {
+  border-top-color: #3a3a3c;
+}
+
+.night_mode .ap4-sentence-block {
+  background: #2c2c2e;
+}
+
+.night_mode .ap4-sentence-text {
+  color: #f5f5f7;
+}
+
+.night_mode .ap4-definition {
+  color: #f5f5f7;
+}
+
+.night_mode .ap4-examples-block {
+  background: #1c1c1e;
+  border-color: #3a3a3c;
+}
+
+.night_mode .ap4-examples-text {
+  color: #d1d1d6;
+}
+
+.night_mode .ap4-quote {
+  background: #2c2c2e;
+  color: #8e8e93;
+  border-left-color: #0071e3;
+}
+
+.night_mode .ap4-tags-block {
+  background: #3a3a3c;
+}
+
+.night_mode .ap4-tags-value {
+  color: #d1d1d6;
+}
+
+.night_mode .ap4-syn-block {
+  background: #2c2c2e;
+  border-color: #3a3a3c;
+}
+
+.night_mode .ap4-ant-block {
+  background: #1c1c1e;
+  border-color: #3a3a3c;
+}
+
+.night_mode .ap4-meta-label {
+  color: #8e8e93;
+}
+
+.night_mode .ap4-meta-value {
+  color: #d1d1d6;
+}
+
+.night_mode .ap4-search-links {
+  border-top-color: #3a3a3c;
+}
+
+.night_mode .ap4-search-links a {
+  color: #409cff;
+}
+
+.night_mode .ap4-sep {
+  color: #3a3a3c;
+}
+
+/* ── Audio replay button — Azure fill ───────────────────────────────────────── */
+.replay-button svg {
+  width: 22px;
+  height: 22px;
+}
+
+.replay-button svg circle {
+  fill: var(--ap-azure);
+}
+
+.replay-button svg path {
+  stroke: var(--ap-snow);
+  fill: var(--ap-snow);
+}
+
+.night_mode .replay-button svg circle {
+  fill: #0071e3;
+}
+
+.night_mode .replay-button svg path {
+  stroke: var(--ap-snow);
+  fill: var(--ap-snow);
+}

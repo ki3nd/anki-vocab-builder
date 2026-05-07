@@ -1,0 +1,37 @@
+<div class="cy7-back">
+
+  <div class="cy7-word-wrap">
+    <span class="cy7-word">{{Structure}}</span>
+  </div>
+
+  <hr class="cy7-divider">
+
+  {{#Meaning}}
+  <div class="cy7-definition">{{Meaning}}</div>
+  <hr class="cy7-divider">
+  {{/Meaning}}
+
+  {{#Examples}}
+  <div class="cy7-examples-block">
+    <span class="cy7-section-label">Examples</span>
+    <div class="cy7-examples-text">{{Examples}}</div>
+  </div>
+  {{/Examples}}
+
+  {{#Equivalent}}
+  <div class="cy7-equivalent-block">
+    <span class="cy7-meta-label">Equivalent</span>
+    <span class="cy7-equivalent-value">{{Equivalent}}</span>
+  </div>
+  {{/Equivalent}}
+
+  {{#Tags}}
+  <div class="cy7-tags-block">
+    <span class="cy7-section-label">Tags</span>
+    <span class="cy7-tags-value">{{Tags}}</span>
+  </div>
+  {{/Tags}}
+
+  {{#Image}}<div class="cy7-image">{{Image}}</div>{{/Image}}
+
+</div>

@@ -1,0 +1,36 @@
+<div class="pl9-back">
+
+  <div class="pl9-word-wrap">
+    <span class="pl9-word">{{Structure}}</span>
+  </div>
+
+  <hr class="pl9-divider">
+
+  {{#Meaning}}
+  <div class="pl9-definition">{{Meaning}}</div>
+  <hr class="pl9-divider">
+  {{/Meaning}}
+
+  {{#Examples}}
+  <div class="pl9-examples-block">
+    <span class="pl9-section-label pl9-section-label--dark">Examples</span>
+    <div class="pl9-examples-text">{{Examples}}</div>
+  </div>
+  {{/Examples}}
+
+  {{#Equivalent}}
+  <div class="pl9-equivalent-block">
+    <span class="pl9-meta-label">Equivalent</span>
+    <span class="pl9-equivalent-value">{{Equivalent}}</span>
+  </div>
+  {{/Equivalent}}
+
+  {{#Tags}}
+  <div class="pl9-tags-block">
+    <span class="pl9-tags-value">{{Tags}}</span>
+  </div>
+  {{/Tags}}
+
+  {{#Image}}<div class="pl9-image">{{Image}}</div>{{/Image}}
+
+</div>

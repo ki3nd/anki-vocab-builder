@@ -1,0 +1,250 @@
+/* ── OpenAI Design System — Sentence Structures Template 10 ──────────────── */
+/* "Blank page before the first word" — pure white, achromatic palette,      */
+/* Inter 600 display, 6.08px cards vs 9999px pills, no shadows on cards      */
+
+:root {
+  --oa-void:     #000000;
+  --oa-canvas:   #ffffff;
+  --oa-chalk:    #f1f1f1;
+  --oa-graphite: #666666;
+  --oa-ash:      #8f8f8f;
+  --oa-fog:      #e5e7eb;
+
+  --oa-font: 'OpenAI Sans', 'Inter', 'DM Sans', ui-sans-serif, system-ui,
+             -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --oa-radius-card: 6.08px;
+  --oa-radius-pill: 9999px;
+  --oa-radius-soft: 40px;
+}
+
+/* ── Base ──────────────────────────────────────────────────────────────────── */
+.card {
+  font-family: var(--oa-font);
+  font-size: 15px;
+  line-height: 1.5;
+  background: var(--oa-canvas);
+  color: var(--oa-void);
+  padding: 24px 20px 20px;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "calt", "liga";
+}
+
+/* ── Structure — Inter 600, reduced for multi-word patterns ──────────────────── */
+.oa10-word-wrap {
+  text-align: center;
+  margin: 0 0 6px;
+}
+
+.oa10-word {
+  font-family: var(--oa-font);
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--oa-void);
+  line-height: 1.21;
+  letter-spacing: -0.5px;
+  font-feature-settings: "calt", "liga";
+}
+
+/* ── Tags chip on front — soft rounded button style, 40px radius ─────────────── */
+.oa10-pos-row {
+  text-align: center;
+  margin: 12px 0 4px;
+}
+
+.oa10-pos {
+  display: inline-block;
+  font-family: var(--oa-font);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--oa-void);
+  background: rgba(0, 0, 0, 0.04);
+  border-radius: var(--oa-radius-soft);
+  padding: 4px 14px;
+  letter-spacing: 0.011em;
+  white-space: normal;
+  word-break: break-word;
+}
+
+/* ── Divider ────────────────────────────────────────────────────────────────── */
+.oa10-divider {
+  border: none;
+  border-top: 1px solid var(--oa-fog);
+  margin: 16px 0;
+}
+
+/* ── Sentence block — Chalk fill, 6.08px radius ─────────────────────────────── */
+.oa10-sentence-block {
+  background: var(--oa-chalk);
+  border-radius: var(--oa-radius-card);
+  padding: 16px 18px;
+  margin: 4px 0 0;
+}
+
+.oa10-sentence-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.oa10-sentence-text {
+  font-family: var(--oa-font);
+  font-size: 14px;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--oa-void);
+  line-height: 1.6;
+}
+
+/* ── Section label ──────────────────────────────────────────────────────────── */
+.oa10-section-label {
+  font-family: var(--oa-font);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--oa-graphite);
+  letter-spacing: 0.011em;
+  text-transform: uppercase;
+}
+
+/* ── Meaning — Inter 600 ────────────────────────────────────────────────────── */
+.oa10-definition {
+  font-family: var(--oa-font);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--oa-void);
+  line-height: 1.45;
+  text-align: left;
+  margin: 4px 0;
+}
+
+/* ── Examples block — white + fog border, 6.08px radius ─────────────────────── */
+.oa10-examples-block {
+  background: var(--oa-canvas);
+  border-radius: var(--oa-radius-card);
+  border: 1px solid var(--oa-fog);
+  padding: 16px 18px;
+  margin: 4px 0 0;
+}
+
+.oa10-examples-text {
+  font-family: var(--oa-font);
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--oa-graphite);
+  line-height: 2;
+  text-align: left;
+  margin-top: 8px;
+}
+
+/* ── Equivalent block — chalk + fog border + black left border ───────────────── */
+.oa10-equivalent-block {
+  background: var(--oa-chalk);
+  border-radius: 0 var(--oa-radius-card) var(--oa-radius-card) 0;
+  border-left: 2px solid var(--oa-void);
+  padding: 12px 14px;
+  margin: 12px 0 0;
+}
+
+.oa10-equivalent-value {
+  font-family: var(--oa-font);
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--oa-graphite);
+  line-height: 1.6;
+  display: block;
+  margin-top: 4px;
+}
+
+/* ── Meta label ─────────────────────────────────────────────────────────────── */
+.oa10-meta-label {
+  font-family: var(--oa-font);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--oa-graphite);
+  letter-spacing: 0.011em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* ── Tags — ghost pill, fog border ─────────────────────────────────────────── */
+.oa10-tags-block {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 12px 0 0;
+  border: 1px solid var(--oa-fog);
+  border-radius: var(--oa-radius-pill);
+  padding: 5px 14px;
+}
+
+.oa10-tags-value {
+  font-family: var(--oa-font);
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--oa-graphite);
+  letter-spacing: 0.011em;
+}
+
+/* ── Image ──────────────────────────────────────────────────────────────────── */
+.oa10-image {
+  margin: 14px auto;
+  max-width: 360px;
+  border-radius: var(--oa-radius-card);
+  overflow: hidden;
+}
+
+.oa10-image img {
+  max-width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Night mode ──────────────────────────────────────────────────────────────── */
+.night_mode .card {
+  background: #0a0a0a;
+  color: #f8f8f8;
+}
+
+.night_mode .oa10-word     { color: #f8f8f8; }
+.night_mode .oa10-divider  { border-top-color: rgba(255, 255, 255, 0.1); }
+.night_mode .oa10-definition { color: #f8f8f8; }
+
+.night_mode .oa10-pos {
+  background: rgba(255, 255, 255, 0.06);
+  color: #f8f8f8;
+}
+
+.night_mode .oa10-sentence-block { background: #1a1a1a; }
+.night_mode .oa10-sentence-text  { color: #e8e8e8; }
+
+.night_mode .oa10-examples-block {
+  background: #111111;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.night_mode .oa10-examples-text { color: #999999; }
+
+.night_mode .oa10-equivalent-block {
+  background: #1a1a1a;
+  border-left-color: #f8f8f8;
+}
+
+.night_mode .oa10-equivalent-value { color: #888888; }
+.night_mode .oa10-meta-label       { color: #666666; }
+
+.night_mode .oa10-tags-block  { border-color: rgba(255, 255, 255, 0.15); }
+.night_mode .oa10-tags-value  { color: #888888; }
+
+/* ── Audio replay button — Void fill ────────────────────────────────────────── */
+.replay-button svg { width: 22px; height: 22px; }
+
+.replay-button svg circle { fill: var(--oa-void); }
+.replay-button svg path   { stroke: var(--oa-canvas); fill: var(--oa-canvas); }
+
+.night_mode .replay-button svg circle { fill: #f8f8f8; }
+.night_mode .replay-button svg path   { stroke: #0a0a0a; fill: #0a0a0a; }

@@ -1,0 +1,37 @@
+<div class="ap4-back">
+
+  <div class="ap4-word-wrap">
+    <span class="ap4-word">{{Structure}}</span>
+  </div>
+
+  <hr class="ap4-divider">
+
+  {{#Meaning}}
+  <div class="ap4-definition">{{Meaning}}</div>
+  <hr class="ap4-divider">
+  {{/Meaning}}
+
+  {{#Examples}}
+  <div class="ap4-examples-block">
+    <span class="ap4-section-label">Examples</span>
+    <div class="ap4-examples-text">{{Examples}}</div>
+  </div>
+  {{/Examples}}
+
+  {{#Equivalent}}
+  <div class="ap4-equivalent-block">
+    <span class="ap4-meta-label">Equivalent</span>
+    <span class="ap4-equivalent-value">{{Equivalent}}</span>
+  </div>
+  {{/Equivalent}}
+
+  {{#Tags}}
+  <div class="ap4-tags-block">
+    <span class="ap4-section-label">Tags</span>
+    <span class="ap4-tags-value">{{Tags}}</span>
+  </div>
+  {{/Tags}}
+
+  {{#Image}}<div class="ap4-image">{{Image}}</div>{{/Image}}
+
+</div>
