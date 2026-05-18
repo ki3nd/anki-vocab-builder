@@ -1,0 +1,54 @@
+<div class="ub11-front">
+
+  <div class="ub11-word-wrap">
+    <span class="ub11-word">{{Word}}</span>
+  </div>
+
+  {{#IPA}}<div class="ub11-ipa">{{IPA}}</div>{{/IPA}}
+
+  {{#AudioAmerican}}{{#AudioBritish}}
+  <div class="ub11-audio-row">
+    <div class="ub11-audio-item"><span class="ub11-audio-flag">US</span>{{AudioAmerican}}</div>
+    <div class="ub11-audio-item"><span class="ub11-audio-flag">UK</span>{{AudioBritish}}</div>
+  </div>
+  {{/AudioBritish}}{{/AudioAmerican}}
+  {{#AudioAmerican}}{{^AudioBritish}}
+  <div class="ub11-audio-row">
+    <div class="ub11-audio-item"><span class="ub11-audio-flag">US</span>{{AudioAmerican}}</div>
+  </div>
+  {{/AudioBritish}}{{/AudioAmerican}}
+  {{^AudioAmerican}}{{#AudioBritish}}
+  <div class="ub11-audio-row">
+    <div class="ub11-audio-item"><span class="ub11-audio-flag">UK</span>{{AudioBritish}}</div>
+  </div>
+  {{/AudioBritish}}{{/AudioAmerican}}
+
+  {{#PartOfSpeech}}
+  <div class="ub11-pos-row"><span class="ub11-pos">{{PartOfSpeech}}</span></div>
+  {{/PartOfSpeech}}
+
+  <hr class="ub11-divider">
+
+  {{#Sentence}}
+  <div class="ub11-sentence-block">
+    <div class="ub11-sentence-header">
+      <span class="ub11-section-label">Example</span>
+      {{#SentenceAudio}}<span class="ub11-sent-audio">{{SentenceAudio}}</span>{{/SentenceAudio}}
+    </div>
+    <div class="ub11-sentence-text">{{Sentence}}</div>
+  </div>
+  {{/Sentence}}
+
+  {{#Image}}<div class="ub11-image">{{Image}}</div>{{/Image}}
+
+  <div class="ub11-search-links">
+    <a href="https://dict.laban.vn/find?type=1&query={{text:Word}}">Laban</a>
+    <span class="ub11-sep">·</span>
+    <a href="https://dictionary.cambridge.org/dictionary/english/{{text:Word}}">Cambridge</a>
+    <span class="ub11-sep">·</span>
+    <a href="https://youglish.com/search/{{text:Word}}/all?">YouGlish</a>
+    <span class="ub11-sep">·</span>
+    <a href="http://images.google.com/search?tbm=isch&q={{text:Word}}">Images</a>
+  </div>
+
+</div>

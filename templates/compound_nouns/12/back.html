@@ -1,0 +1,82 @@
+<div class="bf12-card bf12-back">
+  <div class="bf12-hero bf12-hero-compact">
+    <div class="bf12-kicker">Compound noun</div>
+    <div class="bf12-word">{{CompoundNoun}}</div>
+
+    {{#IPA}}
+    <div class="bf12-ipa">{{IPA}}</div>
+    {{/IPA}}
+
+    <div class="bf12-controls">
+      {{#AudioAmerican}}
+      <div class="bf12-audio"><span class="bf12-audio-label">US</span>{{AudioAmerican}}</div>
+      {{/AudioAmerican}}
+      {{#AudioBritish}}
+      <div class="bf12-audio"><span class="bf12-audio-label">UK</span>{{AudioBritish}}</div>
+      {{/AudioBritish}}
+    </div>
+  </div>
+
+  {{#Definition}}
+  <section class="bf12-panel bf12-definition-panel">
+    <div class="bf12-panel-head"><span>Definition</span></div>
+    <div class="bf12-definition">{{Definition}}</div>
+  </section>
+  {{/Definition}}
+
+  {{#Examples}}
+  <section class="bf12-panel bf12-examples-panel">
+    <div class="bf12-panel-head"><span>Examples</span></div>
+    <div class="bf12-examples">{{Examples}}</div>
+  </section>
+  {{/Examples}}
+
+  {{#Quote}}
+  <section class="bf12-panel bf12-quote-panel">
+    <div class="bf12-panel-head"><span>Quote</span></div>
+    <div class="bf12-quote">{{Quote}}</div>
+  </section>
+  {{/Quote}}
+
+  {{#Tags}}
+  <div class="bf12-tag-row"><span class="bf12-tag">{{Tags}}</span></div>
+  {{/Tags}}
+
+  {{#Synonyms}}{{#Antonyms}}
+  <div class="bf12-meta-grid">
+    <section class="bf12-panel bf12-meta-panel">
+      <div class="bf12-panel-head"><span>Synonyms</span></div>
+      <div class="bf12-meta-text">{{Synonyms}}</div>
+    </section>
+    <section class="bf12-panel bf12-meta-panel">
+      <div class="bf12-panel-head"><span>Antonyms</span></div>
+      <div class="bf12-meta-text">{{Antonyms}}</div>
+    </section>
+  </div>
+  {{/Antonyms}}{{/Synonyms}}
+
+  {{#Synonyms}}{{^Antonyms}}
+  <section class="bf12-panel bf12-meta-panel">
+    <div class="bf12-panel-head"><span>Synonyms</span></div>
+    <div class="bf12-meta-text">{{Synonyms}}</div>
+  </section>
+  {{/Antonyms}}{{/Synonyms}}
+
+  {{^Synonyms}}{{#Antonyms}}
+  <section class="bf12-panel bf12-meta-panel">
+    <div class="bf12-panel-head"><span>Antonyms</span></div>
+    <div class="bf12-meta-text">{{Antonyms}}</div>
+  </section>
+  {{/Antonyms}}{{/Synonyms}}
+
+  {{#Image}}
+  <div class="bf12-image">{{Image}}</div>
+  {{/Image}}
+
+  <nav class="bf12-links">
+    <a href="https://dict.laban.vn/find?type=1&query={{text:CompoundNoun}}">Laban</a>
+    <a href="https://dictionary.cambridge.org/dictionary/english/{{text:CompoundNoun}}">Cambridge</a>
+    <a href="https://youglish.com/search/{{text:CompoundNoun}}/all?">YouGlish</a>
+    <a href="http://images.google.com/search?tbm=isch&q={{text:CompoundNoun}}">Images</a>
+  </nav>
+</div>
