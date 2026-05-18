@@ -32,7 +32,7 @@
   background: var(--bf12-ash);
   color: var(--bf12-ink);
   font-family: var(--bf12-font);
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -84,28 +84,12 @@
   padding-bottom: 24px;
 }
 
-.bf12-kicker {
-  position: relative;
-  z-index: 1;
-  display: inline-block;
-  color: var(--bf12-ink);
-  background: var(--bf12-canvas);
-  border: 1px solid var(--bf12-border);
-  border-radius: var(--bf12-radius-pill);
-  box-shadow: var(--bf12-shadow-1);
-  padding: 6px 14px;
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 1.67;
-  text-transform: uppercase;
-}
-
 .bf12-word {
   position: relative;
   z-index: 1;
   margin: 18px 0 8px;
   color: var(--bf12-ink);
-  font-size: 48px;
+  font-size: 42px;
   font-weight: 700;
   line-height: 1.16;
   letter-spacing: -0.96px;
@@ -116,7 +100,7 @@
   position: relative;
   z-index: 1;
   color: var(--bf12-border);
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   line-height: 1.5;
 }
@@ -142,7 +126,7 @@
   border: 1px solid var(--bf12-border);
   border-radius: var(--bf12-radius-pill);
   box-shadow: var(--bf12-shadow-1);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
   line-height: 1.57;
 }
@@ -212,7 +196,7 @@
 
 .bf12-sentence {
   color: var(--bf12-ink);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 1.44;
   letter-spacing: -0.108px;
@@ -220,7 +204,7 @@
 
 .bf12-definition {
   color: var(--bf12-ink);
-  font-size: 24px;
+  font-size: 17px;
   font-weight: 700;
   line-height: 1.4;
   letter-spacing: -0.24px;
@@ -228,14 +212,14 @@
 
 .bf12-examples {
   color: var(--bf12-ink);
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   line-height: 1.67;
 }
 
 .bf12-quote {
   color: var(--bf12-ink);
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   line-height: 1.5;
 }
@@ -262,7 +246,7 @@
 
 .bf12-meta-text {
   color: var(--bf12-ink);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
   line-height: 1.57;
 }
@@ -300,15 +284,15 @@
   border-radius: var(--bf12-radius-button);
   box-shadow: var(--bf12-shadow-1);
   padding: 8px 16px;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
   line-height: 1.57;
   text-decoration: none;
 }
 
 .replay-button svg {
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
 }
 
 .replay-button svg circle {
@@ -333,7 +317,6 @@
 .night_mode .bf12-panel,
 .night_mode .bf12-image,
 .night_mode .bf12-links a,
-.night_mode .bf12-kicker,
 .night_mode .bf12-audio,
 .night_mode .bf12-tag {
   border-color: #000000;
@@ -342,7 +325,6 @@
 .night_mode .bf12-definition-panel,
 .night_mode .bf12-example-panel,
 .night_mode .bf12-links a,
-.night_mode .bf12-kicker,
 .night_mode .bf12-audio,
 .night_mode .bf12-tag {
   background: #ffffff;

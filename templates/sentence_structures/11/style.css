@@ -20,7 +20,7 @@
 
 .card {
   font-family: var(--ub11-font-text);
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.43;
   background: var(--ub11-canvas);
   color: var(--ub11-ink);
@@ -43,7 +43,7 @@
 .ub11-word {
   display: inline-block;
   font-family: var(--ub11-font-display);
-  font-size: 36px;
+  font-size: 32px;
   font-weight: 700;
   line-height: 1.23;
   color: var(--ub11-ink);
@@ -101,7 +101,7 @@
 }
 
 .ub11-sentence-text {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
   font-style: italic;
   color: var(--ub11-ink);
@@ -110,7 +110,7 @@
 
 .ub11-definition {
   font-family: var(--ub11-font-display);
-  font-size: 20px;
+  font-size: 17px;
   font-weight: 400;
   color: var(--ub11-ink);
   line-height: 1.33;
@@ -127,7 +127,7 @@
 }
 
 .ub11-examples-text {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 400;
   color: var(--ub11-charcoal);
   line-height: 1.67;
@@ -164,7 +164,7 @@
 }
 
 .ub11-tags-value {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 400;
   color: var(--ub11-charcoal);
 }
@@ -184,8 +184,8 @@
 }
 
 .replay-button svg {
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
 }
 
 .replay-button svg circle {
